@@ -48,11 +48,11 @@ restart:
 # Changes behaviour when players try to /join a match.
 join:
   min-players: 1 # Minimum number of players before a match can start.
-  anytime: true # Can players join after a match has started?
-  balance: true # Can players be moved to make teams more balanced?
+  anytime: false # Can players join after a match has started?
+  balance: false # Can players be moved to make teams more balanced?
   queue: false # Should players be put in a queue before joining the match?
   limit: true # Should there be a limit on the number of players on each team?
-  priority-kick: true # Can free players be kicked to observers to make room for a premium player?
+  priority-kick: false # Can free players be kicked to observers to make room for a premium player?
 
 # Changes various gameplay mechanics.
 gameplay:
@@ -82,7 +82,8 @@ sidebar:
 #         Finished = Red (&c)
 #
 # To disable, set to an empty string.
-motd: "{2}» &b{1} {2}«"
+
+motd: "&6Bolt {2}» &e{1}\n&cJoin today @ bolt.rip"
 
 # A list of player groups, defined in order of priority, with highest on top.
 #
@@ -131,7 +132,7 @@ groups:
 
 # Enables "community mode" with features such as /report, /freeze, /warn, and /ban.
 community:
-  enabled: true # Is community mode enabled?
+  enabled: false # Is community mode enabled?
   server-name: "" # Name of your server, displayed when players are kicked.
   rules-link: "" # A URL to a rules website, displayed when players are kicked.
   appeal-msg: "" # A message, displayed on the kick screen, if a player is banned.
