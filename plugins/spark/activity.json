@@ -1,0 +1,28 @@
+[
+  {
+    "user": {
+      "type": "player",
+      "name": "Cobol72",
+      "uniqueId": "f2b92aaf-40cc-4272-ad73-179f1b624658"
+    },
+    "time": 1580073762544,
+    "type": "Sampler",
+    "data": {
+      "type": "url",
+      "value": "https://sparkprofiler.github.io/#VPTF5GmA2h"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "Cobol72",
+      "uniqueId": "f2b92aaf-40cc-4272-ad73-179f1b624658"
+    },
+    "time": 1580071084750,
+    "type": "Sampler",
+    "data": {
+      "type": "url",
+      "value": "https://sparkprofiler.github.io/#B10tosGMUS"
+    }
+  }
+]
