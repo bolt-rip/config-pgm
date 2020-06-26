@@ -16,12 +16,12 @@ jobs:
       - name: Docker Build
         uses: benjlevesque/actions-docker-gcr/build@v1.1
         with:
-          image: ${{ GOOGLE_PROJECT_ID }}/pgm
+          image: ${{ secrets.GOOGLE_PROJECT_ID }}/pgm
           tag: master
 
       - name: Docker Push
         uses: benjlevesque/actions-docker-gcr/push@v1.1
         with:
           gcloud_key: ${{ secrets.GCLOUD_SERVICE_ACCOUNT_KEY }}
-          image: ${{ GOOGLE_PROJECT_ID }}/pgm
+          image: ${{ secrets.GOOGLE_PROJECT_ID }}/pgm
           tag: master
