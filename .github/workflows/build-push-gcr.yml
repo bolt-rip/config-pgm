@@ -14,9 +14,11 @@ jobs:
             echo "${{ secrets.SSH_KEY }}" > id_rsa
 
       - name: Docker Build
-        uses: benjlevesque/actions-docker-gcr/build@v1.1
-
-      - name: Docker Push
-        uses: benjlevesque/actions-docker-gcr/push@v1.1
+        uses: raccoondev/push-docker-gcr
         with:
-          gcloud_key: ${{ secrets.GCLOUD_SERVICE_ACCOUNT_KEY }}
+          gcr_host: gcr.io
+          image_name: pgm
+          image_tag: ${{ GITHUB_REF }}
+          env:
+            GCLOUD_SERVICE_KEY: ${{ secrets.GCLOUD_SERVICE_KEY }}
+            GOOGLE_PROJECT_ID: ${{ secrets.GOOGLE_PROJECT_ID }}
