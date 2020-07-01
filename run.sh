@@ -5,6 +5,4 @@ JAVA_FLAGS="-XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -X
 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem
 -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true"
 
-echo "Starting server.."
-java $JAVA_FLAGS -jar sportpaper.jar
-echo "The server just exited."
+mc-server-runner java $JAVA_FLAGS -jar sportpaper.jar

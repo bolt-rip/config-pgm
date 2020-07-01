@@ -22,6 +22,9 @@ RUN curl https://github.com/PGMDev/PGM/releases/download/v0.8/PGM.jar -Lo plugin
 
 FROM adoptopenjdk/openjdk8-openj9:alpine-slim
 
+RUN wget https://github.com/itzg/mc-server-runner/releases/download/1.4.3/mc-server-runner_1.4.3_linux_amd64.tar.gz -O mc-server-runner.tar.gz && \
+    tar xzf mc-server-runner_1.4.3_linux_amd64.tar.gz -C /usr/bin && rm mc-server-runner.tar.gz
+
 RUN addgroup -g 1000 minecraft && \
     adduser -u 1000 -D -G minecraft minecraft
 
