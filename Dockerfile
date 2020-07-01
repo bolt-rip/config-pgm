@@ -7,13 +7,13 @@ WORKDIR /minecraft
 COPY . .
 
 RUN mkdir -p ~/.ssh
-COPY id_rsa /root/.ssh/id_rsa
-RUN chmod og-rwx ~/.ssh/id_rsa
+COPY id_rsa_maps_pgm /root/.ssh/id_rsa_maps_pgm
+RUN chmod og-rwx ~/.ssh/id_rsa_maps_pgm
 
 RUN apk upgrade --no-cache \
     && apk add --no-cache git openssh-client curl
 
-RUN GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" \
+RUN GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa_maps_pgm" \
     git clone --depth=1 --branch=master git@github.com:bolt-rip/maps.git maps
 RUN rm -rf ./maps/.git
 
