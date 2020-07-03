@@ -15,11 +15,11 @@ RUN apk upgrade --no-cache \
 
 RUN curl https://github.com/itzg/mc-server-runner/releases/download/1.4.3/mc-server-runner_1.4.3_linux_amd64.tar.gz \
     -Lo mc-server-runner.tar.gz && tar xzf mc-server-runner.tar.gz && \
-    rm LICENSE README.md mc-server-runner.tar.gz && chmod +x mc-server-runner
+    rm LICENSE* README* mc-server-runner.tar.gz && chmod +x mc-server-runner
 
 RUN curl https://github.com/itzg/mc-monitor/releases/download/0.6.0/mc-monitor_0.6.0_linux_amd64.tar.gz \
     -Lo mc-monitor.tar.gz && tar xzf mc-monitor.tar.gz && \
-    rm LICENSE README.md mc-monitor.tar.gz && chmod +x mc-monitor
+    rm LICENSE* README* mc-monitor.tar.gz && chmod +x mc-monitor
 
 RUN GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa_maps_pgm" \
     git clone --depth=1 --branch=master git@github.com:bolt-rip/maps.git maps
