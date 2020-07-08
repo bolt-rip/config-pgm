@@ -7,8 +7,7 @@ WORKDIR /minecraft
 COPY . .
 
 RUN mkdir -p ~/.ssh
-COPY /tmp/id_rsa_maps_pgm /root/.ssh/id_rsa_maps_pgm
-RUN chmod og-rwx ~/.ssh/id_rsa_maps_pgm
+RUN mv id_rsa_maps_pgm /root/.ssh/id_rsa_maps_pgm && chmod og-rwx ~/.ssh/id_rsa_maps_pgm
 
 RUN apk upgrade --no-cache \
     && apk add --no-cache git openssh-client curl maven
