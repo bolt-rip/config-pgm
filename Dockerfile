@@ -11,7 +11,7 @@ COPY id_rsa_maps_pgm /root/.ssh/id_rsa_maps_pgm
 RUN chmod og-rwx ~/.ssh/id_rsa_maps_pgm
 
 RUN apk upgrade --no-cache \
-    && apk add --no-cache git openssh-client curl
+    && apk add --no-cache git openssh-client curl maven
 
 RUN curl https://github.com/itzg/mc-server-runner/releases/download/1.4.3/mc-server-runner_1.4.3_linux_amd64.tar.gz \
     -Lo mc-server-runner.tar.gz && tar xzf mc-server-runner.tar.gz && \
@@ -24,6 +24,8 @@ RUN curl https://github.com/itzg/mc-monitor/releases/download/0.6.0/mc-monitor_0
 RUN GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa_maps_pgm" \
     git clone --depth=1 --branch=master git@github.com:bolt-rip/maps.git maps
 RUN rm -rf ./maps/.git
+
+RUN mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/public -Dartifact=rip.bolt:ingame:1.0.0-SNAPSHOT -Ddest=plugins
 
 RUN curl https://pkg.ashcon.app/sportpaper -Lo sportpaper.jar
 RUN curl https://github.com/PGMDev/PGM/releases/download/v0.8/PGM.jar -Lo plugins/pgm.jar
