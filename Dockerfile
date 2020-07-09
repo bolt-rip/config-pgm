@@ -28,7 +28,6 @@ RUN mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/public -Darti
 RUN mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/public -DgroupId=tc.oc.pgm -DartifactId=core -Dversion=0.9-bolt-SNAPSHOT -Ddest=plugins
 
 RUN curl https://pkg.ashcon.app/sportpaper -Lo sportpaper.jar
-RUN curl https://github.com/PGMDev/PGM/releases/download/v0.8/PGM.jar -Lo plugins/pgm.jar
 
 FROM adoptopenjdk/openjdk8-openj9:alpine-slim
 
