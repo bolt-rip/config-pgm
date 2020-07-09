@@ -20,7 +20,7 @@ map:
     # A special "default" source that downloads 5 "classic" maps.
     #
     # Remove this to disable those maps.
-    - "default"
+    #- "default"
 
   # A path to a map pools file, or empty to disable map pools.
   pools: "map-pools.yml"
