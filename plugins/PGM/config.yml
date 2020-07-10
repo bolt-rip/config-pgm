@@ -35,7 +35,7 @@ map:
 # See the examples above for how to format durations.
 countdown:
   start: "30s" # After a match cycles or /start
-  cycle: "30s" # After a match ends or /cycle
+  cycle: -1 # After a match ends or /cycle
   huddle: -1 # Before a match starts (only recommended for "ranked" matches)
 
 # Sets thresholds for when to restart the server.
@@ -69,7 +69,7 @@ ui:
 # Overrides the header and footer of the side bar.
 sidebar:
   header: "" # A header, disabled if empty.
-  footer: "&6bolt.rip" # A footer, disabled if empty.
+  footer: "&6&lus.bolt.rip" # A footer, disabled if empty.
 
 # Overrides the server MoTD.
 #
