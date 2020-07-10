@@ -20,6 +20,10 @@ RUN curl https://github.com/itzg/mc-monitor/releases/download/0.6.0/mc-monitor_0
     -Lo mc-monitor.tar.gz && tar xzf mc-monitor.tar.gz && \
     rm LICENSE* README* mc-monitor.tar.gz && chmod +x mc-monitor
 
+RUN curl https://github.com/itzg/rcon-cli/releases/download/1.4.8/rcon-cli_1.4.8_linux_amd64.tar.gz \
+    -Lo rcon-cli.tar.gz && tar xzf rcon-cli.tar.gz && \
+    rm LICENSE* README* rcon-cli.tar.gz && chmod +x rcon-cli
+
 RUN GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa_maps_pgm" \
     git clone --depth=1 --branch=master git@github.com:bolt-rip/maps.git maps
 RUN rm -rf ./maps/.git
