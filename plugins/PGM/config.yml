@@ -4,8 +4,8 @@
 
 map:
   repositories:
-    - uri: "https://github.com/kelseyhightower/nocode"
-      path: "/tmp/nocode"
+    - uri: "https://github.com/sarcasticadmin/empty-repo"
+      path: "/tmp/empty"
   # List of folders to load maps.
   folders:
     # A folder to load maps.
