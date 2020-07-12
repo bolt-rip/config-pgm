@@ -3,8 +3,11 @@
 # The original PvP Game Manager for Minecraft.
 
 map:
+  repositories:
+    - uri: "https://github.com/kelseyhightower/nocode"
+      path: "/tmp/nocode"
   # List of folders to load maps.
-  sources:
+  folders:
     # A folder to load maps.
     #
     #  server/
@@ -42,8 +45,8 @@ countdown:
 #
 # Set to -1 to disable either of these options.
 restart:
-  uptime: "1d" # Queues a restart after this amount of time has elapsed.
-  match-limit: 60 # Queues a restart after this amount of matches.
+  uptime: -1 # Queues a restart after this amount of time has elapsed.
+  match-limit: -1 # Queues a restart after this amount of matches.
 
 # Changes behaviour when players try to /join a match.
 join:
