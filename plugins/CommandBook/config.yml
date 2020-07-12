@@ -1,4 +1,3 @@
-
 # Use users' display names rather than than their raw username in various messages. Display names are set by other plugins.
 use-display-names: true
 
@@ -21,33 +20,27 @@ low-priority-command-registration: false
 # Give operators (set with the Minecraft /op command) all permissions.
 op-permissions: true
 component-class-dirs:
-- component-classes
+  - component-classes
 component-jar-dirs:
-- component-jars
+  - component-jars
 
 # A list of enabled and disabled components. Components in the disabled list
 # will automatically be removed from the enabled list. Fully qualified class names can
 # or aliases (automatically added to the list by CommandBook) can be used as component names.
 components:
-    disabled:
+  disabled:
     - freeze
     - help
-    enabled:
     - bans
     - homes
     - warps
     - afk
     - messaging
-    - teleport
     - items
     - kits
     - midi
     - time
     - name-verification
-    - fun
-    - debug
-    - thor
-    - online-list
     - stored-messages
     - spawn-locations
     - info
@@ -55,70 +48,76 @@ components:
     - player
     - god
     - flight
+  enabled:
+    - teleport
+    - fun
+    - debug
+    - thor
+    - online-list
 
 # Configurations for CommandBook's built-in components are stored here.
 # Custom component configurations are stored as individual files in the the config/ folder
 component:
-    bans:
-        message: You have been banned
-        broadcast-bans: false
-        broadcast-kicks: false
-    homes:
-        per-world: false
-    warps:
-        per-world: false
-    afk-checker:
-        use-movement-event: true
-        movement-threshold: 0.04
-        sneak-movement-threshold: 0.004
-        afk-minutes: 3
-        afk-kick-minutes: 60
-        afk-general-sleep-ignored: true
-        afk-command-sleep-ignored: false
-        afk-general-protection: true
-        afk-command-protection: false
-    messaging:
-        console-say-format: <`r*Console`w> %s
-        broadcast-format: '`r[Broadcast] %s'
-        pm-color: GRAY
-        pm-text-color: RESET
-        twitter-style: true
-    teleports:
-        call-message:
-            sender: '`yTeleport request sent.'
-            target: '`c**TELEPORT** %cname%`c requests a teleport! Use /bring <name>
-                to accept.'
-            too-soon: Wait a bit before asking again.
-        bring-message:
-            sender: '`yPlayer teleported.'
-            target: '`yYour teleport request to %cname%`y was accepted.'
-            no-perm: That person didn't request a teleport (recently) and you don't have permission to teleport anyone.
-    inventory:
-        item-permissions-only: false
-        allowed-items: []
-        disllowed-items: []
-        default-item-stack-size: 1
-    time-control:
-        time-lock:
-        time-lock-delay: 20
-    thor:
-        hammer-items:
-        - 257
-        - 278
-        - 285
-        - 270
-    online-list:
-        show-max-players: true
-        grouped-names: false
-        list-on-join: true
-    stored-messages:
-        motd: |-
-            `rThis is a Bolt `lRanked `r`ymatch. If you leave you will get a `ldouble loss.
-            `rPlease stick until the end! Thanks for participating on our closed beta.
-        rules: '`y`lPlease check the #rules channel in Discord.'
-    spawn-locations:
-        exact-spawn: false
-    god:
-        auto-enable: false
-    flight:
-        auto-enable: false
+  bans:
+    message: You have been banned
+    broadcast-bans: false
+    broadcast-kicks: false
+  homes:
+    per-world: false
+  warps:
+    per-world: false
+  afk-checker:
+    use-movement-event: true
+    movement-threshold: 0.04
+    sneak-movement-threshold: 0.004
+    afk-minutes: 3
+    afk-kick-minutes: 60
+    afk-general-sleep-ignored: true
+    afk-command-sleep-ignored: false
+    afk-general-protection: true
+    afk-command-protection: false
+  messaging:
+    console-say-format: <`r*Console`w> %s
+    broadcast-format: "`r[Broadcast] %s"
+    pm-color: GRAY
+    pm-text-color: RESET
+    twitter-style: true
+  teleports:
+    call-message:
+      sender: "`yTeleport request sent."
+      target: "`c**TELEPORT** %cname%`c requests a teleport! Use /bring <name>
+        to accept."
+      too-soon: Wait a bit before asking again.
+    bring-message:
+      sender: "`yPlayer teleported."
+      target: "`yYour teleport request to %cname%`y was accepted."
+      no-perm: That person didn't request a teleport (recently) and you don't have permission to teleport anyone.
+  inventory:
+    item-permissions-only: false
+    allowed-items: []
+    disllowed-items: []
+    default-item-stack-size: 1
+  time-control:
+    time-lock:
+    time-lock-delay: 20
+  thor:
+    hammer-items:
+      - 257
+      - 278
+      - 285
+      - 270
+  online-list:
+    show-max-players: true
+    grouped-names: false
+    list-on-join: false
+  stored-messages:
+    motd: |-
+      `rThis is a Bolt `lRanked `rmatch. If you leave you will get a `ldouble loss.
+      `rPlease stick until the end! Thanks for participating on our closed beta.
+    rules: "`y`lPlease check the #rules channel in Discord."
+  spawn-locations:
+    exact-spawn: false
+  god:
+    auto-enable: false
+  flight:
+    auto-enable: false
