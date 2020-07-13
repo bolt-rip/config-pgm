@@ -7,6 +7,6 @@ JAVA_FLAGS="-XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -X
 
 /usr/bin/startup.sh
 
-#/usr/bin/downscaler.sh &
+/usr/bin/downscaler.sh &
 
 exec /usr/bin/mc-server-runner java $JAVA_FLAGS -jar sportpaper.jar
