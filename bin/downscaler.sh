@@ -18,7 +18,11 @@ do
     sleep 10s
     players_number=$(/usr/bin/mc-monitor status --host localhost | grep -Poi 'online=\K\d+')
     #echo "[INFO] There is/are ${players_number} player(s) on the server and the counter is at $(( $counter/6 )) minute(s)."
-    if [ "$players_number" -eq 0 ] && [ "$(kubectl get pod "$POD_NAME" -n minecraft -o=jsonpath='{.metadata.labels.occupied}')" = "false" ]; then
+    if [ "$players_number" -eq 0 ] && \
+        [ "$(kubectl get pod "$POD_NAME" -n minecraft -o=jsonpath='{.metadata.labels.occupied}')" = "false" ] && \
+        [ "$RELEASE_NAME" = "ranked" ]; then
+        counter=$(( $counter + 1 ))
+    elif [ "$players_number" -eq 0 ] && [ "$RELEASE_NAME" != "ranked" ]; then
         counter=$(( $counter + 1 ))
     else
         counter=0
