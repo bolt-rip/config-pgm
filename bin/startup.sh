@@ -1,13 +1,13 @@
 #!/bin/ash
 
 if [ -n "$MAX_PLAYERS" ]; then
-		echo "changing max players"
+		echo "[INFO] Changing the maximum of players."
 		sed -i '/max-players/d' /minecraft/server.properties
 		echo "max-players=${MAX_PLAYERS}" >> /minecraft/server.properties
 fi
 
 if [ -n "$OPERATORS" ]; then
-    echo "adding new operators"
+    echo "[INFO] Adding new operators."
     IFS=":"
     for operator in $OPERATORS
     do
@@ -21,7 +21,7 @@ if [ -n "$OPERATORS" ]; then
 fi
 
 if [ "$RELEASE_NAME" != "ranked" ]; then
-    echo "not a ranked server detected... removing Ingame plugin"
+    echo "[INFO] Not a ranked server detected... removing Ingame plugin."
     rm /minecraft/plugins/ingame-*.jar
 fi
 

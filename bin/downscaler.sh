@@ -33,7 +33,7 @@ if [ "$POD_CONTROLER" = "cloneset" ]; then
     number_of_replicas=$(kubectl get clonesets "$RELEASE_NAME" -n minecraft -o=jsonpath='{.status.replicas}')
     new_number_of_replicas="$(($number_of_replicas-1))"
     kubectl patch -n minecraft clonesets "$RELEASE_NAME" \
-        -p='{"spec":{"scaleStrategy":{"podsToDelete":["'$POD_NAME'"]},"replicas":"'$new_number_of_replicas'"}}' --type=merge
+        -p='{"spec":{"scaleStrategy":{"podsToDelete":["'$POD_NAME'"]},"replicas":'$new_number_of_replicas'}}' --type=merge
 fi
 
 if [ "$POD_CONTROLER" = "helmrelease" ]; then
