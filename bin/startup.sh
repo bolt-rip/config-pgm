@@ -11,6 +11,7 @@ if [ -n "$OPERATORS" ]; then
     IFS=":"
     for operator in $OPERATORS
     do
+        unset IFS
         UUID_URL="https://api.ashcon.app/mojang/v1/uuid/$operator"
         UUID=$(wget -qO- --no-check-certificate $UUID_URL)
         jq '. |= . + [{"uuid": "'$UUID'", "name": "'$operator'", "level": 4, "bypassesPlayerLimit": true}]' \
