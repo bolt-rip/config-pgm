@@ -1,7 +1,7 @@
 #!/bin/ash
 
 if [ -z "$SLEEP_MIN" ]; then
-    SLEEP_MIN=10
+    SLEEP_MIN=15
 fi
 
 counter=0
@@ -17,7 +17,7 @@ while [ $counter -le ${sleep_10_seconds} ]
 do
     sleep 10s
     players_number=$(/usr/bin/mc-monitor status --host localhost | grep -Poi 'online=\K\d+')
-    echo "[INFO] There is/are ${players_number} player(s) on the server and the counter is at $(( $counter/6 )) minute(s)."
+    #echo "[INFO] There is/are ${players_number} player(s) on the server and the counter is at $(( $counter/6 )) minute(s)."
     if [ "$players_number" -eq 0 ] && [ "$(kubectl get pod "$POD_NAME" -n minecraft -o=jsonpath='{.metadata.labels.occupied}')" = "false" ]; then
         counter=$(( $counter + 1 ))
     else
