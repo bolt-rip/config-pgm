@@ -22,6 +22,6 @@ fi
 
 if [ "$RELEASE_NAME" != "ranked" ]; then
     echo "not a ranked server detected... removing Ingame plugin"
-    rm /minecraft/plugins/Ingame.jar
+    rm /minecraft/plugins/ingame-*.jar
 fi
 
