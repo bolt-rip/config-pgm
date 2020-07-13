@@ -27,9 +27,8 @@ RUN curl https://github.com/itzg/rcon-cli/releases/download/1.4.8/rcon-cli_1.4.8
     -Lo rcon-cli.tar.gz && tar xzf rcon-cli.tar.gz && \
     rm LICENSE* README* rcon-cli.tar.gz && mv rcon-cli bin && chmod +x bin/rcon-cli
 
-RUN curl https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt` \
-    -Lo bin/kubectl && \
-    chmod +x bin/kubectl
+RUN curl https://storage.googleapis.com/kubernetes-release/release/v1.18.5/bin/linux/amd64/kubectl \
+    -Lo bin/kubectl && chmod +x bin/kubectl
 
 RUN GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa_maps_pgm" \
     git clone --depth=1 --branch=master git@github.com:bolt-rip/maps.git maps

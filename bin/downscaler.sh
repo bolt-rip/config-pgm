@@ -11,7 +11,7 @@ echo "[INFO] Waiting for the server to start..."
 
 /usr/bin/mc-monitor status --host localhost -retry-limit 999 > /dev/null 2>&1
 
-echo "[INFO] Waiting for 0 player on the server under ${SLEEP_MIN} minutes."
+echo "[INFO] Waiting for 0 player on the server under ${SLEEP_MIN} minute(s)."
 
 while [ $counter -le ${sleep_10_seconds} ]
 do
@@ -27,7 +27,7 @@ do
     sleep 10s
 done
 
-echo "[WARN] There is no one on the server for ${SLEEP_MIN}, shutting down the server!"
+echo "[WARN] There is no one on the server for ${SLEEP_MIN} minute(s), shutting down the server!"
 
 if [ "$POD_CONTROLER" = "cloneset" ]; then
     number_of_replicas=$(kubectl get clonesets "$RELEASE_NAME" -n minecraft -o=jsonpath='{.status.replicas}')
