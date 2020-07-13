@@ -20,8 +20,13 @@ if [ -n "$OPERATORS" ]; then
     done
 fi
 
-if [ "$RELEASE_NAME" != "ranked" ]; then
+if [ "$CHART_NAME" != "ranked" ]; then
     echo "[INFO] Not a ranked server detected... removing Ingame plugin."
     rm /minecraft/plugins/ingame-*.jar
 fi
 
+if [ "$CHART_NAME" = "privateserver" ]; then
+    echo "[INFO] Private server detected... activating the whitelist."
+    sed -i '/white-list/d' /minecraft/server.properties
+	echo "white-list=true" >> /minecraft/server.properties
+fi
