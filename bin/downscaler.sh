@@ -15,7 +15,7 @@ echo "[INFO] Waiting for 0 player on the server under ${SLEEP_MIN} minutes."
 
 while [ $counter -le ${sleep_10_seconds} ]
 do
-    players_number=$(/usr/bin/mc-monitor status --host mc.hypixel.net | grep -Poi 'online=\K\d+')
+    players_number=$(/usr/bin/mc-monitor status --host localhost | grep -Poi 'online=\K\d+')
     echo "[INFO] There is/are ${players_number} player(s) on the server and the counter is at $(( $counter/6 )) minute(s)."
     if [ "$players_number" -eq 0 ]; then
         counter=$(( $counter + 1 ))
