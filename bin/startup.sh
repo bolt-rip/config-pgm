@@ -8,12 +8,12 @@ fi
 
 if [ -n "$OPERATORS" ]; then
     echo "adding new operators"
-    array=$(echo "$OPERATORS" | tr ':' '\n')
-    for element in "${array[@]}"
+    IFS=":"
+    for operator in $OPERATORS
     do
-        UUID_URL=https://api.ashcon.app/mojang/v1/uuid/$element
+        UUID_URL=https://api.ashcon.app/mojang/v1/uuid/$operator
         UUID=$(wget -qO- --no-check-certificate $UUID_URL)
-        jq '. |= . + [{"uuid": "'$UUID'", "name": "'$element'", "level": 4, "bypassesPlayerLimit": true}]' \
+        jq '. |= . + [{"uuid": "'$UUID'", "name": "'$operator'", "level": 4, "bypassesPlayerLimit": true}]' \
             /minecraft/ops.json > /minecraft/ops.json.new
         mv /minecraft/ops.json.new /minecraft/ops.json
     done
