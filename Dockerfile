@@ -21,7 +21,7 @@ RUN curl https://github.com/itzg/mc-monitor/releases/download/0.6.0/mc-monitor_0
     rm LICENSE* README* mc-monitor.tar.gz && mv mc-monitor bin && chmod +x bin/mc-monitor
 
 RUN curl https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 \
-    -Lo bin/jq
+    -Lo bin/jq && chmod +x bin/jq
 
 RUN curl https://github.com/itzg/rcon-cli/releases/download/1.4.8/rcon-cli_1.4.8_linux_amd64.tar.gz \
     -Lo rcon-cli.tar.gz && tar xzf rcon-cli.tar.gz && \
