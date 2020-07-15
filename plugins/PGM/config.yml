@@ -92,18 +92,11 @@ motd: "&6Bolt {2}» &e{1}\n&cJoin today @ bolt.rip"
 #
 # Each group is assigned the permission "pgm.group.<name>".
 groups:
-  # A special group for server operators.
-  op:
-    prefix: "&6❖"
-
-  # customgroup:
-  #   prefix: ""
-  #   permissions:
-  #    - "+pgm.premium"
-  #   observer-permissions: []
-  #   participant-permissions: []
-  #
-  # Create your own group using the template provided above.
+  developer:
+    prefix: "&5❖"
+    
+  manager:
+    prefix: "&d❖"
 
   # A special group for all players.
   #
