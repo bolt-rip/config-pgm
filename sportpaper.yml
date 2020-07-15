@@ -7,7 +7,7 @@ bukkit:
     # Changed from 'Server stopped'
     shutdown-message: Server restarting
     # Move world container from root to matches directory
-    world-container: './matches'
+    world-container: "./matches"
   chunk-gc:
     # Disable garbage collection of chunks
     period-in-ticks: 0
@@ -52,6 +52,8 @@ paper:
     save-player-data: false
     # Do not include random offsets in arrows
     include-randomness-in-arrow-trajectory: false
+
+    include-randomness-in-arrow-damage: true
     # Do not tick worlds with no players
     tick-empty-worlds: false
     # Require all plugins or crash
