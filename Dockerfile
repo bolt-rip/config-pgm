@@ -4,9 +4,9 @@ RUN mkdir /minecraft
 
 WORKDIR /minecraft
 
-COPY /home/runner/.m2/settings.xml /root/.m2/settings.xml
-
 COPY . .
+
+RUN mv m2-settings.xml /root/.m2/settings.xml
 
 RUN mkdir -p ~/.ssh
 RUN mv id_rsa_maps_pgm /root/.ssh/id_rsa_maps_pgm && chmod og-rwx ~/.ssh/id_rsa_maps_pgm

@@ -19,6 +19,10 @@ jobs:
           repositories: '[{ "id": "bolt-rip-private", "url": "https://repo.repsy.io/mvn/boltrip/private", "releases": { "enabled": "true" }, "snapshots": { "enabled": "true" } }]'
           servers: '[{ "id": "bolt-rip-private", "username": "${{ secrets.MAVEN_USERNAME }}", "password": "${{ secrets.MAVEN_PASSWORD }}" }]'
 
+      - name: Copy settings.xml to a location where Docker can pick it up
+        run: |
+            cp ~/.m2/settings.yml m2-settings.xml
+
       - name: Setup SSH Keys and known_hosts
         run: |
             echo "${{ secrets.SSH_KEY_MAPS_PGM }}" > id_rsa_maps_pgm
