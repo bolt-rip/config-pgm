@@ -4,6 +4,8 @@ RUN mkdir /minecraft
 
 WORKDIR /minecraft
 
+COPY ~/.m2/settings.xml ~/.m2/settings.xml
+
 COPY . .
 
 RUN mkdir -p ~/.ssh
@@ -33,11 +35,10 @@ RUN curl https://storage.googleapis.com/kubernetes-release/release/v1.18.5/bin/l
 RUN GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa_maps_pgm" \
     git clone --depth=1 --branch=master git@github.com:bolt-rip/maps.git maps
 RUN rm -rf ./maps/.git
+
 RUN mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/public -Dartifact=rip.bolt:ingame:1.0.0-SNAPSHOT -Ddest=plugins
 RUN mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/public -Dartifact=rip.bolt:antiafk:0.0.1-SNAPSHOT -Ddest=plugins
-
-RUN curl https://dl.dropbox.com/s/j8p338ez7w7y60u/sportpaper.jar?dl=1 -Lo sportpaper.jar
-RUN curl https://dl.dropbox.com/s/6gcluqcy2pubn6c/pgm.jar?dl=1 -Lo plugins/pgm.jar
+RUN mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=org.anchor:Nettle:1.0.0-SNAPSHOT -Ddest=plugins/
 
 FROM adoptopenjdk/openjdk8-openj9:alpine-slim
 
