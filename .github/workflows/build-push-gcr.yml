@@ -21,7 +21,7 @@ jobs:
 
       - name: Copy settings.xml to a location where Docker can pick it up
         run: |
-            cp ~/.m2/settings.yml m2-settings.xml
+            cp ~/.m2/settings.xml m2-settings.xml
 
       - name: Setup SSH Keys and known_hosts
         run: |
