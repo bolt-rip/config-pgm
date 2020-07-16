@@ -6,8 +6,6 @@ WORKDIR /minecraft
 
 COPY . .
 
-RUN mv m2-settings.xml /root/.m2/settings.xml
-
 RUN mkdir -p ~/.ssh
 RUN mv id_rsa_maps_pgm /root/.ssh/id_rsa_maps_pgm && chmod og-rwx ~/.ssh/id_rsa_maps_pgm
 
@@ -38,7 +36,6 @@ RUN rm -rf ./maps/.git
 
 RUN mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/public -Dartifact=rip.bolt:ingame:1.0.0-SNAPSHOT -Ddest=plugins
 RUN mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/public -Dartifact=rip.bolt:antiafk:0.0.1-SNAPSHOT -Ddest=plugins
-RUN mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=org.anchor:Nettle:1.0.0-SNAPSHOT -Ddest=plugins/
 
 FROM adoptopenjdk/openjdk8-openj9:alpine-slim
 
