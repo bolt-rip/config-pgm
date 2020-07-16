@@ -4,7 +4,7 @@ RUN mkdir /minecraft
 
 WORKDIR /minecraft
 
-COPY /root/.m2/settings.xml ~/.m2/settings.xml
+COPY /home/runner/.m2/settings.xml /root/.m2/settings.xml
 
 COPY . .
 
