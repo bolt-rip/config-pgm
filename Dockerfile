@@ -37,6 +37,8 @@ RUN rm -rf ./maps/.git
 RUN mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/public -Dartifact=rip.bolt:ingame:1.0.0-SNAPSHOT -Ddest=plugins
 RUN mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/public -Dartifact=rip.bolt:antiafk:0.0.1-SNAPSHOT -Ddest=plugins
 
+RUN curl https://pkg.ashcon.app/sportpaper -Lo sportpaper.jar
+
 FROM adoptopenjdk/openjdk8-openj9:alpine-slim
 
 RUN addgroup -g 1000 minecraft && \
