@@ -55,7 +55,7 @@ paper:
 
     include-randomness-in-arrow-damage: true
     # Do not tick worlds with no players
-    tick-empty-worlds: false
+    tick-empty-worlds: true
     # Require all plugins or crash
     require-all-plugins: true
   # Ignore excessive velocity log messages

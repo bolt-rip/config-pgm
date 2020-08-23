@@ -74,6 +74,10 @@ sidebar:
   header: "" # A header, disabled if empty.
   footer: "&6&lus.bolt.rip" # A footer, disabled if empty.
 
+tablist:
+  left: "&e&lBOLT"
+  right: "&6us.bolt.rip"
+
 # Overrides the server MoTD.
 #
 #  {0} = The existing server MoTD.
@@ -94,7 +98,7 @@ motd: "&6Bolt {2}» &e{1}\n&cJoin today @ bolt.rip"
 groups:
   developer:
     prefix: "&5❖"
-    
+
   manager:
     prefix: "&d❖"
 
