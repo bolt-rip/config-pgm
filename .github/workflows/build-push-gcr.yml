@@ -24,10 +24,10 @@ jobs:
           repositories: '[{ "id": "bolt-rip-private", "url": "https://repo.repsy.io/mvn/boltrip/private", "releases": { "enabled": "true" }, "snapshots": { "enabled": "true" } }]'
           servers: '[{ "id": "bolt-rip-private", "username": "${{ secrets.MAVEN_USERNAME }}", "password": "${{ secrets.MAVEN_PASSWORD }}" }]'
 
-      - name: Download nettle plugin
+      - name: Download private plugins from repsy
         run: |
             mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=org.anchor:Nettle:1.0.0-SNAPSHOT -Ddest=plugins/
-            mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=com.badlion:bac:1.0 -Ddest=plugins/
+            mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=me.pablete1234.bacperms:1.0 -Ddest=plugins/
 
       - name: Setup SSH Keys and known_hosts
         run: |
