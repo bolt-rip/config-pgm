@@ -36,7 +36,6 @@ RUN rm -rf ./maps/.git
 
 RUN mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/public -Dartifact=rip.bolt:ingame:1.0.0-SNAPSHOT -Ddest=plugins
 RUN mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/public -Dartifact=rip.bolt:antiafk:0.0.1-SNAPSHOT -Ddest=plugins
-RUN mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=com.badlion:bac:1.0 -Ddest=plugins
 
 RUN curl https://pkg.ashcon.app/pgm -Lo plugins/pgm.jar
 RUN curl https://pkg.ashcon.app/sportpaper -Lo sportpaper.jar
