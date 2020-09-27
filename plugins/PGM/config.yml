@@ -102,6 +102,9 @@ groups:
   manager:
     prefix: "&d❖"
 
+  moderator:
+    prefix: "&c❖"
+
   # A special group for all players.
   #
   # Do *not* remove this group unless you know what you're doing.
