@@ -1,6 +1,6 @@
-enforce: false # If the use of bac should be enforced to join & play
-kick : false # Enforce by kicking. Only relevant when auto-forcing people to teams
-join : false # Enforce by prevent joining. Turn OFF when auto-forcing people to teams
+enforce: true # If the use of bac should be enforced to join & play
+kick: true # Enforce by kicking. Only relevant when auto-forcing people to teams
+join: false # Enforce by prevent joining. Turn OFF when auto-forcing people to teams
 kickMessage: "The use of BAC is required to join this match"
 bypass: "bac.bypass" # Permission to bypass bac enforcing
 
