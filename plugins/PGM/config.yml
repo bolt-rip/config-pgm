@@ -72,11 +72,11 @@ ui:
 # Overrides the header and footer of the side bar.
 sidebar:
   header: "" # A header, disabled if empty.
-  footer: "&6&lbolt.rip" # A footer, disabled if empty.
+  footer: "  &b&lbolt.oc.tc" # A footer, disabled if empty.
 
 tablist:
-  left: "&e&lBOLT"
-  right: "&6bolt.rip"
+  left: "&lBOLT.OC.TC"
+  right: "&lBOLT.OC.TC"
 
 # Overrides the server MoTD.
 #
