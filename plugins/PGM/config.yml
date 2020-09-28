@@ -72,7 +72,7 @@ ui:
 # Overrides the header and footer of the side bar.
 sidebar:
   header: "" # A header, disabled if empty.
-  footer: "  &b&lbolt.oc.tc" # A footer, disabled if empty.
+  footer: "&b&lbolt.oc.tc" # A footer, disabled if empty.
 
 tablist:
   left: "&lBOLT.OC.TC"
