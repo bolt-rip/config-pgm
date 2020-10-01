@@ -1,0 +1,5 @@
+{
+   "static-contexts":{
+      "server-type":"bolt"
+   }
+}

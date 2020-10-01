@@ -46,7 +46,7 @@ countdown:
 # Set to -1 to disable either of these options.
 restart:
   uptime: -1 # Queues a restart after this amount of time has elapsed.
-  match-limit: -1 # Queues a restart after this amount of matches.
+  match-limit: 6 # Queues a restart after this amount of matches.
 
 # Changes behaviour when players try to /join a match.
 join:
@@ -65,18 +65,18 @@ gameplay:
 ui:
   sidebar: true # Enable the side bar?
   tablist: false # Enable the tab list?
-  proximity: false # Should the proximity of objectives be visible?
+  proximity: true # Should the proximity of objectives be visible?
   fireworks: true # Spawn fireworks after objectives are completed?
   participants-see-observers: true # Can participants see observers in the tab list?
 
 # Overrides the header and footer of the side bar.
 sidebar:
   header: "" # A header, disabled if empty.
-  footer: "&6&lus.bolt.rip" # A footer, disabled if empty.
+  footer: "&b&lbolt.oc.tc" # A footer, disabled if empty.
 
 tablist:
-  left: "&e&lBOLT"
-  right: "&6us.bolt.rip"
+  left: "&lBOLT.OC.TC"
+  right: "&lBOLT.OC.TC"
 
 # Overrides the server MoTD.
 #
@@ -90,7 +90,7 @@ tablist:
 #
 # To disable, set to an empty string.
 
-motd: "&6Bolt {2}» &e{1}\n&cJoin today @ bolt.rip"
+motd: ""
 
 # A list of player groups, defined in order of priority, with highest on top.
 #
@@ -101,6 +101,9 @@ groups:
 
   manager:
     prefix: "&d❖"
+
+  moderator:
+    prefix: "&c❖"
 
   # A special group for all players.
   #
