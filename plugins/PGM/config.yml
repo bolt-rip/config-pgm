@@ -46,7 +46,7 @@ countdown:
 # Set to -1 to disable either of these options.
 restart:
   uptime: -1 # Queues a restart after this amount of time has elapsed.
-  match-limit: -1 # Queues a restart after this amount of matches.
+  match-limit: 6 # Queues a restart after this amount of matches.
 
 # Changes behaviour when players try to /join a match.
 join:
