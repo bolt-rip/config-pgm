@@ -52,7 +52,7 @@ COPY --from=BUILD --chown=minecraft:minecraft /minecraft .
 
 RUN mv bin/* /usr/bin
 
-RUN apk add --no-cache grep
+RUN apk add --no-cache curl grep
 
 USER minecraft
 ENTRYPOINT [ "/minecraft/run.sh" ]
