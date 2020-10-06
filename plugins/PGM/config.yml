@@ -98,12 +98,77 @@ motd: ""
 groups:
   developer:
     prefix: "&5❖"
-
+    permissions:
+      - "+nerve.*"
+      - "+spark.*"
+      - "+*"
+      - "+bac.bypass"
+      - "+ingame.spectate"
+      - "+minecraft.command.gamemode"
+      - "+nettle.staff"
+      - "+pgm.dev"
+      - "+viaversion.admin"
+      
   manager:
     prefix: "&d❖"
-
+    permissions:
+      - "+commandbook.teleport.*"
+      - "+ingame.*"
+      - "+worldedit.butcher.*"
+      - "+worldedit.clipboard.*"
+      - "+worldedit.history.*"
+      - "+worldedit.navigation.*"
+      - "+worldedit.region.*"
+      - "+worldedit.selection.*"
+      - "+commandbook.gamemode"
+      - "+commandbook.gamemode.change"
+      - "+commandbook.slap"
+      - "+commandbook.slap.other"
+      - "+commandbook.teleport.other"
+      - "+ingame.spectate"
+      - "+ingame.staff"
+      - "+minecraft.command.banlist"
+      - "+minecraft.command.kick"
+      - "+minecraft.command.pardon"
+      - "+pgm.gameplay"
+      - "+pgm.mod"
+      - "+worldedit.butcher"
+      - "+worldedit.drain"
+      - "+worldedit.extinguish"
+      - "+worldedit.remove"
+      - "+worldedit.searchitem"
+      - "+worldedit.wand"
+      - "+nettle.staff"
+      
   moderator:
     prefix: "&c❖"
+    permissions:
+      - "+commandbook.teleport.*"
+      - "+ingame.*"
+      - "+worldedit.butcher.*"
+      - "+worldedit.clipboard.*"
+      - "+worldedit.history.*"
+      - "+worldedit.navigation.*"
+      - "+worldedit.region.*"
+      - "+worldedit.selection.*"
+      - "+commandbook.gamemode"
+      - "+commandbook.gamemode.change"
+      - "+commandbook.slap"
+      - "+commandbook.slap.other"
+      - "+commandbook.teleport.other"
+      - "+ingame.spectate"
+      - "+ingame.staff"
+      - "+minecraft.command.banlist"
+      - "+minecraft.command.kick"
+      - "+minecraft.command.pardon"
+      - "+pgm.gameplay"
+      - "+pgm.mod"
+      - "+worldedit.butcher"
+      - "+worldedit.drain"
+      - "+worldedit.extinguish"
+      - "+worldedit.remove"
+      - "+worldedit.searchitem"
+      - "+worldedit.wand"
 
   # A special group for all players.
   #
@@ -123,6 +188,7 @@ groups:
       - "-commandbook.pong"
       - "-commandbook.speed.flight"
       - "-commandbook.speed.walk"
+      - "+ingame.spectate"
     # A list of permissions, only when a player is observing.
     observer-permissions:
       - "+worldedit.navigation.*"
