@@ -108,6 +108,7 @@ groups:
       - "+nettle.staff"
       - "+pgm.dev"
       - "+viaversion.admin"
+      - "+ingame.staff"
       
   manager:
     prefix: "&d❖"
