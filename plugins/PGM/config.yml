@@ -169,6 +169,36 @@ groups:
       - "+worldedit.remove"
       - "+worldedit.searchitem"
       - "+worldedit.wand"
+      
+  techmod:
+    prefix: "&4❖"
+    permissions:
+      - "+commandbook.teleport.*"
+      - "+ingame.*"
+      - "+worldedit.butcher.*"
+      - "+worldedit.clipboard.*"
+      - "+worldedit.history.*"
+      - "+worldedit.navigation.*"
+      - "+worldedit.region.*"
+      - "+worldedit.selection.*"
+      - "+commandbook.gamemode"
+      - "+commandbook.gamemode.change"
+      - "+commandbook.slap"
+      - "+commandbook.slap.other"
+      - "+commandbook.teleport.other"
+      - "+ingame.spectate"
+      - "+ingame.staff"
+      - "+minecraft.command.banlist"
+      - "+minecraft.command.kick"
+      - "+minecraft.command.pardon"
+      - "+pgm.gameplay"
+      - "+pgm.mod"
+      - "+worldedit.butcher"
+      - "+worldedit.drain"
+      - "+worldedit.extinguish"
+      - "+worldedit.remove"
+      - "+worldedit.searchitem"
+      - "+worldedit.wand"
 
   # A special group for all players.
   #
