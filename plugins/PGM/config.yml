@@ -200,6 +200,13 @@ groups:
       - "+worldedit.remove"
       - "+worldedit.searchitem"
       - "+worldedit.wand"
+      
+  tmwinner:
+    prefix: "&4*"
+    permissions:
+      - "+pgm.premium"
+    observer-permissions: []
+    participant-permissions: []
 
   # A special group for all players.
   #
