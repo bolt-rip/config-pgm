@@ -26,7 +26,7 @@ jobs:
 
       - name: Download private plugins from repsy
         run: |
-            mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=org.anchor:Nettle:1.0.0-SNAPSHOT -Ddest=plugins/
+            #mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=org.anchor:Nettle:1.0.0-SNAPSHOT -Ddest=plugins/
             mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=me.pablete1234:bacperms:1.0 -Ddest=plugins/
 
       - name: Setup SSH Keys and known_hosts
