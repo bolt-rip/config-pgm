@@ -46,6 +46,12 @@ spigot:
     chunks-per-tick: 1
     # Clear the tick list to prevent massive growth
     clear-tick-list: true
+    entity-tracking-range:
+      players: 128
+      animals: 48
+      monsters: 48
+      misc: 32
+      other: 128
 paper:
   settings:
     # Do not save any player data
