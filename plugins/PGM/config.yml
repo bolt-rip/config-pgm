@@ -109,6 +109,7 @@ groups:
       - "+pgm.dev"
       - "+viaversion.admin"
       - "+ingame.staff"
+      - "+spark"
       
   manager:
     prefix: "&d❖"
