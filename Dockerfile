@@ -31,8 +31,9 @@ RUN curl https://storage.googleapis.com/kubernetes-release/release/v1.18.5/bin/l
     -Lo bin/kubectl && chmod +x bin/kubectl
 
 RUN GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa_maps_pgm" \
-    git clone --depth=1 --branch=master git@github.com:bolt-rip/maps.git maps
+    git clone --recurse-submodules --depth=1 --branch=master git@github.com:bolt-rip/maps.git maps
 RUN rm -rf ./maps/.git
+RUN rm -rf ./maps/scrimmage-maps/.git
 
 RUN mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/public -Dartifact=rip.bolt:ingame:1.0.0-SNAPSHOT -Ddest=plugins
 RUN mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/public -Dartifact=rip.bolt:antiafk:0.0.1-SNAPSHOT -Ddest=plugins
