@@ -43,8 +43,8 @@ RUN curl https://pkg.ashcon.app/pgm -Lo plugins/pgm.jar
 
 FROM adoptopenjdk:8-jre-hotspot
 
-RUN addgroup -g 1000 minecraft && \
-    adduser -u 1000 -D -G minecraft minecraft
+RUN addgroup --gid 1000 minecraft && \
+    adduser --uid 1000 --group minecraft minecraft
 
 RUN mkdir /minecraft
 RUN chown minecraft:minecraft -R /minecraft
@@ -53,7 +53,7 @@ COPY --from=BUILD --chown=minecraft:minecraft /minecraft .
 
 RUN mv bin/* /usr/bin
 
-RUN apk add --no-cache curl grep
+RUN apt update && apt install curl grep -y
 
 USER minecraft
 ENTRYPOINT [ "/minecraft/run.sh" ]
