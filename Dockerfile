@@ -41,7 +41,7 @@ RUN mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/public -Darti
 RUN curl https://pkg.ashcon.app/pgm -Lo plugins/pgm.jar
 #RUN curl https://pkg.ashcon.app/sportpaper -Lo sportpaper.jar
 
-FROM adoptopenjdk/openjdk8-openj9:alpine-slim
+FROM adoptopenjdk/8-jre-hotspot
 
 RUN addgroup -g 1000 minecraft && \
     adduser -u 1000 -D -G minecraft minecraft
