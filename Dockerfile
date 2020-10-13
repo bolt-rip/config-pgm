@@ -44,7 +44,8 @@ RUN curl https://pkg.ashcon.app/pgm -Lo plugins/pgm.jar
 FROM adoptopenjdk:8-jre-hotspot
 
 RUN addgroup --gid 1000 minecraft && \
-    adduser --uid 1000 --group minecraft minecraft
+    adduser --uid 1000 minecraft && \
+    adduser minecraft minecraft
 
 RUN mkdir /minecraft
 RUN chown minecraft:minecraft -R /minecraft
