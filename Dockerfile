@@ -53,7 +53,5 @@ COPY --from=BUILD --chown=minecraft:minecraft /minecraft .
 
 RUN mv bin/* /usr/bin
 
-RUN apt update && apt install curl grep -y
-
 USER minecraft
 ENTRYPOINT [ "/minecraft/run.sh" ]
