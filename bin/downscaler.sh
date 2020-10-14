@@ -1,4 +1,4 @@
-#!/bin/ash
+#!/bin/bash
 
 if [ -z "$SLEEP_MIN" ]; then
     SLEEP_MIN=15
