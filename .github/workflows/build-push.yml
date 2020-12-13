@@ -45,8 +45,8 @@ jobs:
         uses: docker/login-action@v1 
         with:
           registry: docker.pkg.github.com
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: ${{ secrets.GHR_USERNAME }}
+          password: ${{ secrets.GHR_PASSWORD }}
 
       -
         name: Build and push
