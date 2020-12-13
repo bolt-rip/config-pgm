@@ -43,15 +43,15 @@ RUN curl https://pkg.ashcon.app/pgm -Lo plugins/pgm.jar
 
 FROM adoptopenjdk/openjdk8-openj9:alpine-slim
 
-RUN addgroup --gid 1000 minecraft && \
-    useradd -u 1000 -g minecraft minecraft
+RUN addgroup -g 1000 minecraft && \
+    adduser -u 1000 -D -G minecraft minecraft
 
 RUN mkdir /minecraft
 RUN chown minecraft:minecraft -R /minecraft
 WORKDIR /minecraft
 COPY --from=BUILD --chown=minecraft:minecraft /minecraft .
 
-RUN apt update && apt install -y wget
+RUN apk add --no-cache curl grep
 
 USER minecraft
 ENTRYPOINT [ "/minecraft/run.sh" ]
