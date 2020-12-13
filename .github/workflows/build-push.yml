@@ -56,4 +56,4 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            yul.ocir.io/ax9n3v6n1qzw/bolt/bolt-pgm:latest
+            yul.ocir.io/ax9n3v6n1qzw/bolt-pgm:latest
