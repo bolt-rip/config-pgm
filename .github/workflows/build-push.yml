@@ -56,4 +56,4 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            repo.treescale.com/unixfox/bolt-pgm:latest
+            repo.treescale.com/bolt/config-pgm:latest
