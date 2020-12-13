@@ -41,7 +41,7 @@ RUN mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/public -Darti
 RUN curl https://pkg.ashcon.app/pgm -Lo plugins/pgm.jar
 #RUN curl https://pkg.ashcon.app/sportpaper -Lo sportpaper.jar
 
-FROM adoptopenjdk:8-jre-hotspot
+FROM adoptopenjdk/openjdk8-openj9:alpine-slim
 
 RUN addgroup --gid 1000 minecraft && \
     useradd -u 1000 -g minecraft minecraft
@@ -50,8 +50,6 @@ RUN mkdir /minecraft
 RUN chown minecraft:minecraft -R /minecraft
 WORKDIR /minecraft
 COPY --from=BUILD --chown=minecraft:minecraft /minecraft .
-
-RUN mv bin/* /usr/bin
 
 RUN apt update && apt install -y wget
 

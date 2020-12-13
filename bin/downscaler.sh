@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 
 if [ -z "$SLEEP_MIN" ]; then
     SLEEP_MIN=15
@@ -9,14 +9,14 @@ sleep_10_seconds=$(( $SLEEP_MIN*6 ))
 
 echo "[INFO] Waiting for the server to start..."
 
-/usr/bin/mc-monitor status --host localhost -retry-limit 999 > /dev/null 2>&1
+/minecraft/bin/mc-monitor status --host localhost -retry-limit 999 > /dev/null 2>&1
 
 echo "[INFO] Waiting for 0 player on the server under ${SLEEP_MIN} minute(s)."
 
 while [ $counter -le ${sleep_10_seconds} ]
 do
     sleep 10s
-    players_number=$(/usr/bin/mc-monitor status --host localhost | grep -Poi 'online=\K\d+')
+    players_number=$(/minecraft/bin/mc-monitor status --host localhost | grep -Poi 'online=\K\d+')
     #echo "[INFO] There is/are ${players_number} player(s) on the server and the counter is at $(( $counter/6 )) minute(s)."
     if [ "$players_number" -eq 0 ] && \
         [ "$(kubectl get pod "$POD_NAME" -n minecraft -o=jsonpath='{.metadata.labels.occupied}')" != "true" ]; then

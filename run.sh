@@ -5,8 +5,8 @@ JAVA_FLAGS="-XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -X
 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem
 -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true"
 
-/usr/bin/startup.sh
+/minecraft/bin/startup.sh
 
-/usr/bin/downscaler.sh &
+/minecraft/bin/downscaler.sh &
 
-exec /usr/bin/mc-server-runner java $JAVA_FLAGS -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -XX:MaxRAMFraction=1 -Xms${MEMORY:-1G} -jar sportpaper.jar
+exec /minecraft/bin/mc-server-runner java $JAVA_FLAGS -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -XX:MaxRAMFraction=1 -Xms${MEMORY:-1G} -jar sportpaper.jar

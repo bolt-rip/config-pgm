@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 
 if [ -n "$MAX_PLAYERS" ]; then
 		echo "[INFO] Changing the maximum of players."
