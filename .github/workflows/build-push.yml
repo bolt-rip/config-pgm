@@ -36,7 +36,7 @@ jobs:
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          name: bolt/config-pgm/pgm
+          name: bolt-rip/config-pgm/pgm
           registry: docker.pkg.github.com
           username: unixfox
           password: ${{ secrets.GITHUB_TOKEN }}
