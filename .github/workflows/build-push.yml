@@ -2,6 +2,9 @@ name: Docker
 
 on:
   push:
+    branches:
+      - master 
+  pull_request:
   repository_dispatch:
     types:
       - build
@@ -9,7 +12,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    if: github.ref == 'refs/heads/master'
     steps:
       - uses: actions/checkout@v1
 
@@ -38,6 +41,6 @@ jobs:
         with:
           name: bolt-rip/k8s/config-pgm
           registry: docker.pkg.github.com
-          username: unixfox
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: ${{ secrets.GHR_USERNAME }}
+          password: ${{ secrets.GHR_PASSWORD }}
           snapshot: true
