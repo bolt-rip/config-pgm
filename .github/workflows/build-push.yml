@@ -39,8 +39,8 @@ jobs:
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          name: bolt-rip/k8s/config-pgm
-          registry: docker.pkg.github.com
+          name: bolt-rip/config-pgm
+          registry: ghcr.io
           username: ${{ secrets.GHR_USERNAME }}
           password: ${{ secrets.GHR_PASSWORD }}
           snapshot: true
