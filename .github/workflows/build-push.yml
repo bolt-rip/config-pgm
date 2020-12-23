@@ -36,7 +36,7 @@ jobs:
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          name: bolt/config-pgm
-          registry: repo.treescale.com
-          username: ${{ secrets.TREESCALE_USERNAME }}
-          password: ${{ secrets.TREESCALE_PASSWORD }}
+          name: bolt/config-pgm/pgm
+          registry: docker.pkg.github.com
+          username: unixfox
+          password: ${{ secrets.GITHUB_TOKEN }}
