@@ -46,7 +46,7 @@ RUN chown minecraft:minecraft -R /minecraft
 WORKDIR /minecraft
 COPY --from=BUILD --chown=minecraft:minecraft /minecraft .
 
-RUN apk add --no-cache curl grep jq kubectl
+RUN apk add --no-cache curl grep jq && apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing kubectl
 
 USER minecraft
 ENTRYPOINT [ "/minecraft/run.sh" ]
