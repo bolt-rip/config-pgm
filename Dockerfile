@@ -52,7 +52,7 @@ RUN chown minecraft:minecraft -R /minecraft
 WORKDIR /minecraft
 COPY --from=BUILD --chown=minecraft:minecraft /minecraft .
 
-RUN apk add --no-cache curl grep
+RUN apk add --no-cache curl grep jq
 
 USER minecraft
 ENTRYPOINT [ "/minecraft/run.sh" ]
