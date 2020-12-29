@@ -24,10 +24,12 @@ RUN curl https://github.com/itzg/rcon-cli/releases/download/1.4.8/rcon-cli_1.4.8
     -Lo rcon-cli.tar.gz && tar xzf rcon-cli.tar.gz && \
     rm LICENSE* README* rcon-cli.tar.gz && mv rcon-cli bin && chmod +x bin/rcon-cli
 
-RUN GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa_maps_pgm" \
-    git clone --recurse-submodules --depth=1 --branch=master git@github.com:bolt-rip/maps.git maps
+RUN GIT_SSH_COMMAND="ssh --depth=1 --branch=master -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa_maps_pgm" \
+        git clone git@github.com:bolt-rip/maps.git maps
+RUN GIT_SSH_COMMAND="ssh --depth=1 --branch=master -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" \
+        git clone https://github.com/OvercastCommunity/scrimmage-maps.git scrimmage-maps
 RUN rm -rf ./maps/.git
-RUN rm -rf ./maps/scrimmage-maps/.git
+RUN rm -rf ./scrimmage-maps/.git
 
 RUN mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/public -Dartifact=rip.bolt:ingame:1.0.0-SNAPSHOT -Ddest=plugins
 RUN mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/public -Dartifact=rip.bolt:antiafk:0.0.1-SNAPSHOT -Ddest=plugins
