@@ -24,9 +24,9 @@ RUN curl https://github.com/itzg/rcon-cli/releases/download/1.4.8/rcon-cli_1.4.8
     -Lo rcon-cli.tar.gz && tar xzf rcon-cli.tar.gz && \
     rm LICENSE* README* rcon-cli.tar.gz && mv rcon-cli bin && chmod +x bin/rcon-cli
 
-RUN GIT_SSH_COMMAND="ssh --depth=1 --branch=master -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa_maps_pgm" \
-        git clone git@github.com:bolt-rip/maps.git maps
-RUN GIT_SSH_COMMAND="ssh --depth=1 --branch=master -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" \
+RUN GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa_maps_pgm" \
+        git clone --depth=1 --branch=master git@github.com:bolt-rip/maps.git maps
+RUN GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" \
         git clone https://github.com/OvercastCommunity/scrimmage-maps.git scrimmage-maps
 RUN rm -rf ./maps/.git
 RUN rm -rf ./scrimmage-maps/.git
