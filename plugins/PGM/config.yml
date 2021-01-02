@@ -77,7 +77,7 @@ sidebar:
 
 tablist:
   left: "&lBOLT.OC.TC"
-  right: "&lBOLT.OC.TC"
+  right: "&f&l%SERVER-NAME%"
 
 # Overrides the server MoTD.
 #

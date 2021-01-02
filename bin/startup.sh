@@ -1,5 +1,7 @@
 #!/bin/ash
 
+sed -i "s/%SERVER-NAME%/$SERVER_NAME/g" plugins/PGM/config.yml
+
 if [ -n "$MAX_PLAYERS" ]; then
 		echo "[INFO] Changing the maximum of players."
 		sed -i '/max-players/d' /minecraft/server.properties
