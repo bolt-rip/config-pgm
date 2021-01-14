@@ -38,3 +38,7 @@ fi
 if [ "$POD_CONTROLER" = "helmrelease" ]; then
     kubectl delete helmrelease "$RELEASE_NAME"
 fi
+
+if [ "$POD_CONTROLER" = "helm-controller" ]; then
+    kubectl delete helmchart "$RELEASE_NAME"
+fi
