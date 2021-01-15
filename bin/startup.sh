@@ -23,8 +23,9 @@ if [ -n "$OPERATORS" ]; then
 fi
 
 if [ "$CHART_NAME" != "ranked" ]; then
-    echo "[INFO] Not a ranked server detected... removing Ingame plugin."
+    echo "[INFO] Not a ranked server detected... removing Ingame and Events plugin."
     rm /minecraft/plugins/ingame-*.jar
+    rm /minecraft/plugins/events.jar
 fi
 
 if [ "$CHART_NAME" = "privateserver" ]; then
