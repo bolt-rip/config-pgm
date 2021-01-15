@@ -3,6 +3,7 @@ kick: true # Enforce by kicking. Only relevant when auto-forcing people to teams
 join: true # Enforce by prevent joining. Turn OFF when auto-forcing people to teams
 kickMessage: "The use of BAC is required to join this match"
 bypass: "bac.bypass" # Permission to bypass bac enforcing
+pollsPercent: 0.6 # Minimum player votes (rounded) to allow joining
 
 tablist: true # If BAC should overwrite tab list to add verified checks
 permission: "pgm.group.bac" # Permission to assign or deny based on if they have BAC enabled or not
