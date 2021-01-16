@@ -1,13 +1,13 @@
 # default config
 
 # the observer team must ready up
-observers-must-ready: true
+observers-must-ready: false
 
 # only allow ready if team is full
-ready-full-team-required: false
+ready-full-team-required: true
 
 # remind team to ready when team full
 ready-reminders: true
 
 # unready if a team player leaves
-auto-unready: false
+auto-unready: true
