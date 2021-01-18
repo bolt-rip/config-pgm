@@ -6,18 +6,15 @@ WORKDIR /minecraft
 
 COPY . .
 
-RUN rm -rf ./maps/.git
-RUN rm -rf ./scrimmage-maps/.git
-
 RUN apk add --no-cache jq wget curl
 
 RUN wget -q https://github.com/itzg/mc-server-runner/releases/download/1.4.3/mc-server-runner_1.4.3_linux_amd64.tar.gz \
             https://github.com/itzg/mc-monitor/releases/download/0.6.0/mc-monitor_0.6.0_linux_amd64.tar.gz \
             https://github.com/itzg/rcon-cli/releases/download/1.4.8/rcon-cli_1.4.8_linux_amd64.tar.gz
             
-RUN tar xzf *.tar.gz && \
+RUN ls *.tar.gz | xargs -n1 tar -xzf && \
     chmod +x mc-server-runner mc-monitor rcon-cli && \
-    mv mc-monitor mc-server-runner mc-monitor bin/ && \
+    mv mc-monitor mc-server-runner rcon-cli bin/ && \
     rm LICENSE* README* *.tar.gz
 
 WORKDIR /minecraft/plugins

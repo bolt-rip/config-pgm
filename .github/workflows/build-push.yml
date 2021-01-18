@@ -45,6 +45,10 @@ jobs:
         run: |
             mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=me.pablete1234:bacperms:1.2.2 -Ddest=plugins/
 
+      - name: Delete useless files and directories
+        run: |
+            rm -rf ./maps/.git ./scrimmage-maps/.git .git .github .gitignore
+
       - name: Publish to Registry
         uses: docker://lgohr/publish-docker-github-action:20210118133633a73f0f
         with:
