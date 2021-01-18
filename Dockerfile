@@ -19,14 +19,14 @@ RUN ls *.tar.gz | xargs -n1 tar -xzf && \
 
 WORKDIR /minecraft/plugins
 
-RUN ash -c "wget -q $(curl -sL https://api.github.com/repos/bolt-rip/ingame/releases/latest | jq -r '.assets[].browser_download_url') \
-            $(curl -sL https://api.github.com/repos/bolt-rip/ingame/releases/latest | jq -r '.assets[].browser_download_url') \
+RUN ash -c "wget --content-disposition -q $(curl -sL https://api.github.com/repos/bolt-rip/ingame/releases/latest | jq -r '.assets[].browser_download_url') \
+            $(curl -sL https://api.github.com/repos/bolt-rip/AntiAFK/releases/latest | jq -r '.assets[].browser_download_url') \
             $(curl -sL https://api.github.com/repos/PGMDev/Events/releases/latest | jq -r '.assets[].browser_download_url') \
             https://pkg.ashcon.app/pgm"
             
 WORKDIR /minecraft
 
-RUN wget -q https://pkg.ashcon.app/sportpaper
+RUN wget -q --content-disposition https://pkg.ashcon.app/sportpaper
 
 FROM adoptopenjdk/openjdk8-openj9:alpine-slim
 

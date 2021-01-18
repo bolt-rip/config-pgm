@@ -43,7 +43,7 @@ jobs:
 
       - name: Download private plugins from repsy
         run: |
-            mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=me.pablete1234:bacperms:1.2.2 -Ddest=plugins/
+            mvn -q dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=me.pablete1234:bacperms:1.2.2 -Ddest=plugins/
 
       - name: Delete useless files and directories
         run: |
