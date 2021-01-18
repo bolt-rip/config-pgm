@@ -37,7 +37,7 @@ jobs:
             echo "${{ secrets.SSH_KEY_MAPS_PGM }}" > id_rsa_maps_pgm
 
       - name: Publish to Registry
-        uses: lgohr/publish-docker-github-action@latest
+        uses: docker://docker.pkg.github.com/elgohr/publish-docker-github-action/publish-docker-github-action:latest
         with:
           name: bolt-rip/config-pgm
           registry: ghcr.io
