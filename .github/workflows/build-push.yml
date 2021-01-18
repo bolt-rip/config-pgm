@@ -14,7 +14,21 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     steps:
-      - uses: actions/checkout@v1
+      - name: Git checkout main repo
+        uses: actions/checkout@v2
+
+      - name: Git checkout bolt maps
+        uses: actions/checkout@v2
+        with:
+          repository: bolt-rip/maps
+          token: ${{ secrets.GHR_PASSWORD }}
+          path: maps
+
+      - name: Git checkout OCC scrimmage maps
+        uses: actions/checkout@v2
+        with:
+          repository: OvercastCommunity/scrimmage-maps
+          path: scrimmage-maps
 
       - name: Set up Maven
         uses: actions/setup-java@v1
@@ -29,12 +43,7 @@ jobs:
 
       - name: Download private plugins from repsy
         run: |
-            #mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=org.anchor:Nettle:1.0.0-SNAPSHOT -Ddest=plugins/
             mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=me.pablete1234:bacperms:1.2.2 -Ddest=plugins/
-
-      - name: Setup SSH Keys and known_hosts
-        run: |
-            echo "${{ secrets.SSH_KEY_MAPS_PGM }}" > id_rsa_maps_pgm
 
       - name: Publish to Registry
         uses: docker://lgohr/publish-docker-github-action:20210118133633a73f0f

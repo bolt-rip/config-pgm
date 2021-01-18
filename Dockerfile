@@ -6,37 +6,30 @@ WORKDIR /minecraft
 
 COPY . .
 
-RUN mkdir -p ~/.ssh
-RUN mv id_rsa_maps_pgm /root/.ssh/id_rsa_maps_pgm && chmod og-rwx ~/.ssh/id_rsa_maps_pgm
-
-RUN apk upgrade --no-cache \
-    && apk add --no-cache git openssh-client curl maven jq
-
-RUN curl https://github.com/itzg/mc-server-runner/releases/download/1.4.3/mc-server-runner_1.4.3_linux_amd64.tar.gz \
-    -Lo mc-server-runner.tar.gz && tar xzf mc-server-runner.tar.gz && \
-    rm LICENSE* README* mc-server-runner.tar.gz && mv mc-server-runner bin && chmod +x bin/mc-server-runner
-
-RUN curl https://github.com/itzg/mc-monitor/releases/download/0.6.0/mc-monitor_0.6.0_linux_amd64.tar.gz \
-    -Lo mc-monitor.tar.gz && tar xzf mc-monitor.tar.gz && \
-    rm LICENSE* README* mc-monitor.tar.gz && mv mc-monitor bin && chmod +x bin/mc-monitor
-
-RUN curl https://github.com/itzg/rcon-cli/releases/download/1.4.8/rcon-cli_1.4.8_linux_amd64.tar.gz \
-    -Lo rcon-cli.tar.gz && tar xzf rcon-cli.tar.gz && \
-    rm LICENSE* README* rcon-cli.tar.gz && mv rcon-cli bin && chmod +x bin/rcon-cli
-
-RUN GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa_maps_pgm" \
-        git clone --depth=1 --branch=master git@github.com:bolt-rip/maps.git maps
-RUN GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" \
-        git clone https://github.com/OvercastCommunity/scrimmage-maps.git scrimmage-maps
 RUN rm -rf ./maps/.git
 RUN rm -rf ./scrimmage-maps/.git
 
-RUN ash -c "curl $(curl -sL https://api.github.com/repos/bolt-rip/ingame/releases/latest | jq -r '.assets[].browser_download_url') -Lo plugins/ingame.jar"
-RUN ash -c "curl $(curl -sL https://api.github.com/repos/bolt-rip/AntiAFK/releases/latest | jq -r '.assets[].browser_download_url') -Lo plugins/antiafk.jar"
-RUN ash -c "curl $(curl -sL https://api.github.com/repos/PGMDev/Events/releases/latest | jq -r '.assets[].browser_download_url') -Lo plugins/events.jar"
-RUN curl https://pkg.ashcon.app/pgm -Lo plugins/pgm.jar
+RUN apk add --no-cache jq wget curl
 
-RUN curl https://pkg.ashcon.app/sportpaper -Lo sportpaper.jar
+RUN wget -q https://github.com/itzg/mc-server-runner/releases/download/1.4.3/mc-server-runner_1.4.3_linux_amd64.tar.gz \
+            https://github.com/itzg/mc-monitor/releases/download/0.6.0/mc-monitor_0.6.0_linux_amd64.tar.gz \
+            https://github.com/itzg/rcon-cli/releases/download/1.4.8/rcon-cli_1.4.8_linux_amd64.tar.gz
+            
+RUN tar xzf *.tar.gz && \
+    chmod +x mc-server-runner mc-monitor rcon-cli && \
+    mv mc-monitor mc-server-runner mc-monitor bin/ && \
+    rm LICENSE* README* *.tar.gz
+
+WORKDIR /minecraft/plugins
+
+RUN ash -c "wget -q $(curl -sL https://api.github.com/repos/bolt-rip/ingame/releases/latest | jq -r '.assets[].browser_download_url') \
+            $(curl -sL https://api.github.com/repos/bolt-rip/ingame/releases/latest | jq -r '.assets[].browser_download_url') \
+            $(curl -sL https://api.github.com/repos/PGMDev/Events/releases/latest | jq -r '.assets[].browser_download_url') \
+            https://pkg.ashcon.app/pgm"
+            
+WORKDIR /minecraft
+
+RUN wget -q https://pkg.ashcon.app/sportpaper
 
 FROM adoptopenjdk/openjdk8-openj9:alpine-slim
 
