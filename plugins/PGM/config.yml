@@ -18,9 +18,9 @@ map:
     #    maps/
     #
     # See the example above, folders are relative to the server folder.
-    - "maps"
     - "scrimmage-maps"
-
+    - "maps"
+ 
     # A special "default" source that downloads 5 "classic" maps.
     #
     # Remove this to disable those maps.
