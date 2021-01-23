@@ -99,7 +99,11 @@ motd: ""
 # Each group is assigned the permission "pgm.group.<name>".
 groups:
   developer:
-    prefix: "&5❖"
+    prefix: "&5✵"
+    # Display name of the group - Displayed when hovering over prefix/suffix              
+    display-name: "&5Developer"
+    # Description of group - Displayed when hovering over prefix/suffix
+    description: "&7Contributes software enhancements for BOLT"
     permissions:
       - "+nerve.*"
       - "+spark.*"
@@ -116,7 +120,11 @@ groups:
       - "+spark"
       
   manager:
-    prefix: "&d❖"
+    prefix: "&4✵"
+    # Display name of the group - Displayed when hovering over prefix/suffix              
+    display-name: "&4Manager"
+    # Description of group - Displayed when hovering over prefix/suffix
+    description: "&7Is either in charge of moderation or maps"
     permissions:
       - "+commandbook.teleport.*"
       - "+worldedit.butcher.*"
@@ -148,8 +156,12 @@ groups:
       - "+worldedit.wand"
       - "+nettle.staff"
       
-  moderator:
-    prefix: "&c❖"
+  techmod:
+    prefix: "&c✵"
+    # Display name of the group - Displayed when hovering over prefix/suffix              
+    display-name: "&cTechnical Moderator"
+    # Description of group - Displayed when hovering over prefix/suffix
+    description: "&7Makes sure non-BAC users are not cheating"
     permissions:
       - "+commandbook.teleport.*"
       - "+worldedit.butcher.*"
@@ -179,8 +191,12 @@ groups:
       - "+worldedit.searchitem"
       - "+worldedit.wand"
       
-  techmod:
-    prefix: "&4❖"
+  moderator:
+    prefix: "&c❖"
+    # Display name of the group - Displayed when hovering over prefix/suffix              
+    display-name: "&cModerator"
+    # Description of group - Displayed when hovering over prefix/suffix
+    description: "&7Enforces the rules"
     permissions:
       - "+commandbook.teleport.*"
       - "+worldedit.butcher.*"
@@ -211,7 +227,7 @@ groups:
       - "+worldedit.wand"
       
   tmwinner:
-    prefix: "&4*"
+    prefix: "&0*"
     permissions:
       - "+pgm.premium"
     observer-permissions: []
