@@ -110,7 +110,7 @@ groups:
       - "+nettle.staff"
       - "+pgm.dev"
       - "+viaversion.admin"
-      - "+ingame.staff"
+      - "+ingame.staff.*"
       - "+spark"
       
   manager:
