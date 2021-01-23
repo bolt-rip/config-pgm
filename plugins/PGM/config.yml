@@ -53,7 +53,7 @@ restart:
 # Changes behaviour when players try to /join a match.
 join:
   min-players: 1 # Minimum number of players before a match can start.
-  anytime: false # Can players join after a match has started?
+  anytime: true # Can players join after a match has started?
   balance: false # Can players be moved to make teams more balanced?
   queue: false # Should players be put in a queue before joining the match?
   limit: true # Should there be a limit on the number of players on each team?
