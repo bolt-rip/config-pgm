@@ -252,6 +252,7 @@ groups:
       - "-commandbook.speed.flight"
       - "-commandbook.speed.walk"
       - "+events.spectate"
+      - "+pgm.premium"
     # A list of permissions, only when a player is observing.
     observer-permissions:
       - "+worldedit.navigation.*"
