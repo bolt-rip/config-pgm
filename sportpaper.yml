@@ -54,16 +54,52 @@ spigot:
       other: 128
 paper:
   settings:
-    # Do not save any player data
+    # Whether interaction packets should be limited from clients.
+    limit-player-interactions: true
+
+    # Size of the region file cache.
+    region-file-cache-size: 256
+
+    # Speed at which baby zombies can move.
+    baby-zombie-movement-speed: 0.5
+
+    # Whether to save empty scoreboard teams.
+    save-empty-scoreboard-teams: false
+
+    # Whether to save player data to disk.
     save-player-data: false
-    # Do not include random offsets in arrows
+
+    # Whether to actively tick worlds with no players.
+    tick-empty-worlds: true
+
+    # Whether to abort server startup if at least one
+    # plugin fails to load.
+    require-all-plugins: false
+
+    spam-limiter:
+
+      # Value to increment for each tab complete event.
+      tab-spam-increment: 10
+
+      # Maximum number of increment values before disconnecting the player.
+      tab-spam-limit: 500
+
+    # Duration to wait before suspending an server
+    # with no players online.
+    empty-server-suspend: P1Y
+
+    # Whether arrow projectiles should have a random factor.
     include-randomness-in-arrow-trajectory: false
 
+    # Whether arrow projectiles should add a random amount of damage (like in vanilla minecraft)
     include-randomness-in-arrow-damage: true
-    # Do not tick worlds with no players
-    tick-empty-worlds: true
-    # Require all plugins or crash
-    require-all-plugins: true
+
+    # Number of ticks between player data saves to disk.
+    player-auto-save-rate: -1
+
+    # Maximum number of player data to save per tick.
+    max-player-auto-save-per-tick: -1
+
   # Ignore excessive velocity log messages
   warnWhenSettingExcessiveVelocity: false
   world-settings:
