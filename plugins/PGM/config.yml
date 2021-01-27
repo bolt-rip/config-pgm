@@ -280,4 +280,5 @@ community:
 database-uri: ""
 
 # Experimental features that are not yet stable.
-experiments: {}
+experiments:
+  unload-non-match-worlds: "true"
