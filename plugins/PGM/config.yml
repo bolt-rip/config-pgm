@@ -135,7 +135,7 @@ groups:
     display-name: "&a&lD Rank"
     description: "&7This flair is only shown when playing a match"
   unranked:
-    prefix: "&8&l? "
+    prefix: "&8&l- "
     display-name: "&8&lUnranked"
     description: "&7This flair is only shown when playing a match"
 
