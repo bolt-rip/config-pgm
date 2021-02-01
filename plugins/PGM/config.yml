@@ -21,7 +21,6 @@ map:
     - "scrimmage-maps"
     - "maps"
 
-
     # A special "default" source that downloads 5 "classic" maps.
     #
     # Remove this to disable those maps.
@@ -99,9 +98,50 @@ motd: ""
 #
 # Each group is assigned the permission "pgm.group.<name>".
 groups:
+  s:
+    prefix: "&c&lS "
+    display-name: "&c&lS Rank"
+    description: "&7This flair is only shown when playing a match"
+  a_plus:
+    prefix: "&e&lA+ "
+    display-name: "&e&lA+ Rank"
+    description: "&7This flair is only shown when playing a match"
+  a:
+    prefix: "&e&lA "
+    display-name: "&e&lA Rank"
+    description: "&7This flair is only shown when playing a match"
+  b_plus:
+    prefix: "&7&lB+ "
+    display-name: "&7&lB+ Rank"
+    description: "&7This flair is only shown when playing a match"
+  b:
+    prefix: "&7&lB "
+    display-name: "&7&lB Rank"
+    description: "&7This flair is only shown when playing a match"
+  c_plus:
+    prefix: "&6&lC+ "
+    display-name: "&6&lC+ Rank"
+    description: "&7This flair is only shown when playing a match"
+  c:
+    prefix: "&6&lC "
+    display-name: "&6&lC Rank"
+    description: "&7This flair is only shown when playing a match"
+  d_plus:
+    prefix: "&a&lD+ "
+    display-name: "&a&lD+ Rank"
+    description: "&7This flair is only shown when playing a match"
+  d:
+    prefix: "&a&lD "
+    display-name: "&a&lD Rank"
+    description: "&7This flair is only shown when playing a match"
+  unranked:
+    prefix: "&8&l? "
+    display-name: "&8&lUnranked"
+    description: "&7This flair is only shown when playing a match"
+
   developer:
     prefix: "&5✵"
-    # Display name of the group - Displayed when hovering over prefix/suffix              
+    # Display name of the group - Displayed when hovering over prefix/suffix
     display-name: "&5Developer"
     # Description of group - Displayed when hovering over prefix/suffix
     description: "&7Contributes software enhancements for BOLT"
@@ -119,10 +159,10 @@ groups:
       - "+events.*"
       - "+bac.admin.enforce"
       - "+spark"
-      
+
   manager:
     prefix: "&4✵"
-    # Display name of the group - Displayed when hovering over prefix/suffix              
+    # Display name of the group - Displayed when hovering over prefix/suffix
     display-name: "&4Manager"
     # Description of group - Displayed when hovering over prefix/suffix
     description: "&7Is either in charge of moderation or maps"
@@ -156,10 +196,10 @@ groups:
       - "+worldedit.searchitem"
       - "+worldedit.wand"
       - "+nettle.staff"
-      
+
   techmod:
     prefix: "&c✵"
-    # Display name of the group - Displayed when hovering over prefix/suffix              
+    # Display name of the group - Displayed when hovering over prefix/suffix
     display-name: "&cTechnical Moderator"
     # Description of group - Displayed when hovering over prefix/suffix
     description: "&7Makes sure non-BAC users are not cheating"
@@ -191,10 +231,10 @@ groups:
       - "+worldedit.remove"
       - "+worldedit.searchitem"
       - "+worldedit.wand"
-      
+
   moderator:
     prefix: "&c❖"
-    # Display name of the group - Displayed when hovering over prefix/suffix              
+    # Display name of the group - Displayed when hovering over prefix/suffix
     display-name: "&cModerator"
     # Description of group - Displayed when hovering over prefix/suffix
     description: "&7Enforces the rules"
@@ -226,7 +266,7 @@ groups:
       - "+worldedit.remove"
       - "+worldedit.searchitem"
       - "+worldedit.wand"
-      
+
   tmwinner:
     prefix: "&0*"
     permissions:
