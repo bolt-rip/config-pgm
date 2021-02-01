@@ -155,7 +155,7 @@ groups:
       - "+nettle.staff"
       - "+pgm.dev"
       - "+viaversion.admin"
-      - "+ingame.*"
+      - "+ingame.staff.*"
       - "+events.*"
       - "+bac.admin.enforce"
       - "+spark"
