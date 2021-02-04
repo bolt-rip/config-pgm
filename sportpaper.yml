@@ -86,7 +86,7 @@ paper:
 
     # Duration to wait before suspending an server
     # with no players online.
-    empty-server-suspend: P1Y
+    empty-server-suspend: PT1H
 
     # Whether arrow projectiles should have a random factor.
     include-randomness-in-arrow-trajectory: false
