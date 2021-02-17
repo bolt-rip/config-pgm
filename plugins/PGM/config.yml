@@ -159,6 +159,7 @@ groups:
       - "+events.*"
       - "+bac.admin.enforce"
       - "+spark"
+      - "+autokiller.staff"
 
   manager:
     prefix: "&4✵"
@@ -196,6 +197,7 @@ groups:
       - "+worldedit.searchitem"
       - "+worldedit.wand"
       - "+nettle.staff"
+      - "+autokiller.staff"
 
   techmod:
     prefix: "&c✵"
@@ -231,6 +233,7 @@ groups:
       - "+worldedit.remove"
       - "+worldedit.searchitem"
       - "+worldedit.wand"
+      - "+autokiller.staff"
 
   moderator:
     prefix: "&c❖"
@@ -266,6 +269,7 @@ groups:
       - "+worldedit.remove"
       - "+worldedit.searchitem"
       - "+worldedit.wand"
+      - "+autokiller.staff"
 
   tmwinner:
     prefix: "&0*"
