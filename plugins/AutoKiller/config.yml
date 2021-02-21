@@ -15,7 +15,7 @@ ban-command: "ban %player% Unfair Advantage"
 # You can customize the alert messages here.
 # Placeholders: %player% for player's name, %ping% for player's ping, %cheat% for the cheat type, %vl% for the violation level (VL is cps for clickspeed-alert).
 clickspeed-alert: "&8[&eAC&8] &e%player% &7(%ping%ms) &6is suspected for &c%cheat% &7(%vl% cps)"
-normal-alert: "&8[&eAC&8] &e%player% &7(%ping%ms) &6is suspected for &c%cheat% (&8VL: %vl%)"
+normal-alert: "&8[&eAC&8] &e%player% &7(%ping%ms) &6is suspected for &c%cheat% &7(VL: %vl%)"
 
 click-speed:
   vl-to-alert: 8
