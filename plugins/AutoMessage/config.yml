@@ -2,5 +2,5 @@
 delay: 90
 prefix: "&7&l[&9&lTip&7&l]"
 messages:
-  - "&3Join our Discord! &b&nhttps://bolt.rip/"
+  - "&3Join our Discord! &b&nhttps://bolt.rip/discord"
   - "&3If someone leaves, &bdon't requeue! &3The system will automatically &bban &3that user once the match attempts to start."
