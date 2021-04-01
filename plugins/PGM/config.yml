@@ -276,7 +276,7 @@ groups:
       - "+autokiller.staff"
 
   tm3:
-    prefix: "&6*"
+    prefix: "&5*"
     permissions:
       - "+pgm.premium"
     observer-permissions: []
