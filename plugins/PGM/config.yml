@@ -275,8 +275,8 @@ groups:
       - "+worldedit.wand"
       - "+autokiller.staff"
 
-  tmwinner:
-    prefix: "&0*"
+  tm3:
+    prefix: "&6*"
     permissions:
       - "+pgm.premium"
     observer-permissions: []
