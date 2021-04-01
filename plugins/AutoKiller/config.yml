@@ -22,7 +22,7 @@ click-speed:
   vl-to-ban: 30
   enabled: true
   # The cps at which the "Click Speed" check will alert/ban.
-  max-speed: 15
+  max-speed: 18
 
 # Consistent-Clicks check options
 consistent-clicks:
