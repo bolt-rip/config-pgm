@@ -23,12 +23,19 @@ if [ -n "$OPERATORS" ]; then
 fi
 
 if [ "$CHART_NAME" != "ranked" ]; then
-    echo "[INFO] Not a ranked server detected... removing Ingame and Events plugin."
-    rm -f /minecraft/plugins/ingame.jar /minecraft/plugins/Events.jar
+    echo "[INFO] Not a ranked server detected... removing Ingame, Events, AutoKiller, Bolty and Matrix plugins."
+    rm -f /minecraft/plugins/ingame.jar /minecraft/plugins/Events.jar \
+        /minecraft/plugins/AutoKiller.jar /minecraft/plugins/Bolty.jar \
+        /minecraft/plugins/Matrix.jar
 fi
 
 if [ "$CHART_NAME" = "privateserver" ]; then
     echo "[INFO] Private server detected... activating the whitelist."
     sed -i '/white-list/d' /minecraft/server.properties
 	echo "white-list=true" >> /minecraft/server.properties
+fi
+
+if [ "$NODE_NAME" != "ns522982" ]; then
+    echo "[INFO] Not on OCC node (node name: ns522982)... removing LPX and Matrix plugins."
+    rm -f /minecraft/plugins/LPX.jar /minecraft/plugins/Matrix.jar
 fi
