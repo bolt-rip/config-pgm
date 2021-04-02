@@ -1,6 +1,7 @@
 #!/bin/ash
 
 sed -i "s/%SERVER-NAME%/$SERVER_NAME/g" plugins/PGM/config.yml
+sed -i "s/%SERVER-NAME%/$SERVER_NAME/g" plugins/Bolty/config.yml
 
 if [ -n "$MAX_PLAYERS" ]; then
 		echo "[INFO] Changing the maximum of players."
@@ -25,8 +26,8 @@ fi
 if [ "$CHART_NAME" != "ranked" ]; then
     echo "[INFO] Not a ranked server detected... removing Ingame, Events, AutoKiller, Bolty and Matrix plugins."
     rm -f /minecraft/plugins/ingame.jar /minecraft/plugins/Events.jar \
-        /minecraft/plugins/AutoKiller.jar /minecraft/plugins/Bolty.jar \
-        /minecraft/plugins/Matrix.jar
+        /minecraft/plugins/AutoKiller-*.jar /minecraft/plugins/Bolty-*.jar \
+        /minecraft/plugins/Matrix-*.jar
 fi
 
 if [ "$CHART_NAME" = "privateserver" ]; then
@@ -37,5 +38,5 @@ fi
 
 if [ "$NODE_NAME" != "ns522982" ]; then
     echo "[INFO] Not on OCC node (node name: ns522982)... removing LPX and Matrix plugins."
-    rm -f /minecraft/plugins/LPX.jar /minecraft/plugins/Matrix.jar
+    rm -f /minecraft/plugins/LPX-*.jar /minecraft/plugins/Matrix-*.jar
 fi
