@@ -143,6 +143,13 @@ groups:
     display-name: "&8&lUnranked"
     description: "&7This flair is only shown when playing a match"
 
+  tm3:
+    prefix: "&5*"
+    permissions:
+      - "+pgm.premium"
+    observer-permissions: []
+    participant-permissions: []
+
   developer:
     prefix: "&5✵"
     # Display name of the group - Displayed when hovering over prefix/suffix
@@ -274,13 +281,6 @@ groups:
       - "+worldedit.searchitem"
       - "+worldedit.wand"
       - "+autokiller.staff"
-
-  tm3:
-    prefix: "&5*"
-    permissions:
-      - "+pgm.premium"
-    observer-permissions: []
-    participant-permissions: []
 
   # A special group for all players.
   #
