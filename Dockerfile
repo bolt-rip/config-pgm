@@ -23,6 +23,7 @@ RUN ash -c "wget --content-disposition -q $(curl -sL https://api.github.com/repo
             $(curl -sL https://api.github.com/repos/bolt-rip/AntiAFK/releases/latest | jq -r '.assets[].browser_download_url') \
             $(curl -sL https://api.github.com/repos/PGMDev/Events/releases/latest | jq -r '.assets[].browser_download_url') \
             $(curl -sL https://api.github.com/repos/applenick/autokiller/releases/latest | jq -r '.assets[].browser_download_url') \
+            $(curl -sL https://api.github.com/repos/applenick/Bolty/releases/latest | jq -r '.assets[].browser_download_url') \
             https://pkg.ashcon.app/pgm"
             
 WORKDIR /minecraft
