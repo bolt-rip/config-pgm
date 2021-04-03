@@ -1,9 +1,12 @@
 #!/bin/ash
 
 sed -i "s/%SERVER-NAME%/$SERVER_NAME/g" plugins/PGM/config.yml
-# temporary hack due to configmap being read only, need to be fixed
-cp plugins/Bolty/config-readonly.yml plugins/Bolty/config.yml
-sed -i "s/%SERVER-NAME%/$SERVER_NAME/g" plugins/Bolty/config.yml
+
+if [ "$CHART_NAME" == "ranked" ]; then
+    # temporary hack due to configmap being read only, need to be fixed
+    cp plugins/Bolty/config-readonly.yml plugins/Bolty/config.yml
+    sed -i "s/%SERVER-NAME%/$SERVER_NAME/g" plugins/Bolty/config.yml
+fi
 
 if [ -n "$MAX_PLAYERS" ]; then
 		echo "[INFO] Changing the maximum of players."
