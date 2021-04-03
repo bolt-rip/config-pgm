@@ -8,6 +8,8 @@ bukkit:
     shutdown-message: Server restarting
     # Move world container from root to matches directory
     world-container: "./matches"
+    # for some reason sportpaper loads from the wrong key for permissions.yml
+    update-folder: permissions.yml
   chunk-gc:
     # Disable garbage collection of chunks
     period-in-ticks: 0

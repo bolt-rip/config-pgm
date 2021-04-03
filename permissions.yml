@@ -1,0 +1,4 @@
+disableipban:
+  default: true
+  children:
+    minecraft.command.ban-ip: false
