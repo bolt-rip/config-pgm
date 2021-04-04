@@ -46,7 +46,7 @@ jobs:
             mvn -q dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=me.pablete1234:bacperms:1.3.0 -Ddest=plugins/
             mvn -q dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=me.rerere.matrix:Matrix:5.6.3 -Ddest=plugins/
             mvn -q dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=it.ytnoos.lpx:LPX:2.4.3-MORTAL -Ddest=plugins/
-            mvn -q dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=tc.oc.morpheus:Morpheus:1.0.0-SNAPSHOT -Ddest=plugins/
+            mvn -q dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=tc.oc.morpheus:Morpheus:1.0.1-SNAPSHOT -Ddest=plugins/
 
       - name: Delete useless files and directories
         run: |
