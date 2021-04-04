@@ -122,10 +122,10 @@ paper:
     allow-block-location-tab-completion: false
     # Use async lighting updates
     use-async-lighting: true
-  # knockback:
-  #   friction: 1.9
-  #     horizontal: 0.377
-  #     vertical: 0.37325
-  #     vertical-limit: 0.37325
-  #     extra-horizontal: 0.42
-  #     extra-vertical: 0.0785
+  knockback:
+    friction: 2.25
+      horizontal: 0.35
+      vertical: 0.405
+      vertical-limit: 0.41
+      extra-horizontal: 0.425
+      extra-vertical: 0.065
