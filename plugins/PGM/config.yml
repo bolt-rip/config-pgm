@@ -166,7 +166,12 @@ groups:
       - "+nettle.staff"
       - "+pgm.dev"
       - "+viaversion.admin"
-      - "+ingame.staff.*"
+      - "+ingame.staff.poll"
+      - "+ingame.staff.clear"
+      - "+ingame.staff.match"
+      - "+ingame.staff.status"
+      - "+ingame.staff.cancel"
+      - "+ingame.staff.ban"
       - "+events.*"
       - "+bac.admin.enforce"
       - "+spark"
@@ -195,6 +200,7 @@ groups:
       - "+ingame.staff.match"
       - "+ingame.staff.status"
       - "+ingame.staff.cancel"
+      - "+ingame.staff.ban"
       - "+bac.admin.enforce"
       - "+minecraft.command.banlist"
       - "+minecraft.command.kick"
@@ -209,6 +215,12 @@ groups:
       - "+worldedit.wand"
       - "+nettle.staff"
       - "+autokiller.staff"
+      - "+matrix.command"
+      - "+matrix.gui"
+      - "+matrix.notify"
+      - "+matrix.verbose"
+      - "+matrix.violations"
+      - "+matrix.ping"
 
   techmod:
     prefix: "&c✵"
@@ -233,6 +245,7 @@ groups:
       - "+ingame.staff.match"
       - "+ingame.staff.status"
       - "+ingame.staff.cancel"
+      - "+ingame.staff.ban"
       - "+minecraft.command.banlist"
       - "+minecraft.command.kick"
       - "+minecraft.command.pardon"
@@ -245,6 +258,12 @@ groups:
       - "+worldedit.searchitem"
       - "+worldedit.wand"
       - "+autokiller.staff"
+      - "+matrix.command"
+      - "+matrix.gui"
+      - "+matrix.notify"
+      - "+matrix.verbose"
+      - "+matrix.violations"
+      - "+matrix.ping"
 
   moderator:
     prefix: "&c❖"
@@ -281,6 +300,12 @@ groups:
       - "+worldedit.searchitem"
       - "+worldedit.wand"
       - "+autokiller.staff"
+      - "+matrix.command"
+      - "+matrix.gui"
+      - "+matrix.notify"
+      - "+matrix.verbose"
+      - "+matrix.violations"
+      - "+matrix.ping"
 
   # A special group for all players.
   #
@@ -306,6 +331,7 @@ groups:
     observer-permissions:
       - "+worldedit.navigation.*"
       - "+commandbook.teleport"
+      - "+matrix.bypass"
     # A list of permissions, only when a player is participating.
     participant-permissions:
       - "-worldedit.navigation.thru.tool"
