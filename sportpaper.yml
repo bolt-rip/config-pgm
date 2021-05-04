@@ -26,6 +26,8 @@ spigot:
     restart-on-crash: false
     # Shuffle tick order of players every minute
     player-shuffle: 1200
+    moved-too-quickly-threshold: 1000.0
+    moved-wrongly-threshold: 0.625
   timings:
     # Disable timings data
     enabled: false
