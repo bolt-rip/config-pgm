@@ -28,7 +28,7 @@ RUN ash -c "wget --content-disposition -q $(curl -sL https://api.github.com/repo
             
 WORKDIR /minecraft
 
-RUN wget -q https://pkg.ashcon.app/sportpaper -O sportpaper.jar
+# RUN wget -q https://pkg.ashcon.app/sportpaper -O sportpaper.jar
 
 FROM adoptopenjdk/openjdk8-openj9:alpine-slim
 
