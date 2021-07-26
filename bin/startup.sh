@@ -45,3 +45,12 @@ if [ "$NODE_NAME" != "ns522982" ]; then
     echo "[INFO] Not on OCC node (node name: ns522982)... removing LPX and Matrix plugins."
     rm -f /minecraft/plugins/LPX-*.jar /minecraft/plugins/Matrix-*.jar
 fi
+
+# disable PGM tablist if ingame exists
+TAB_ENABLED=true
+INGAME=/minecraft/plugins/ingame.jar
+if [[ -f "$INGAME" ]]; then
+    TAB_ENABLED=false
+fi
+
+sed -i "s/%TAB-ENABLED%/$TAB_ENABLED/g" plugins/PGM/config.yml
