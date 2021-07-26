@@ -29,8 +29,9 @@ if [ -n "$OPERATORS" ]; then
 fi
 
 if [ "$CHART_NAME" = "ranked" ]; then
-    echo "[INFO] Ranked server detected... removing AutoKiller, Bolty and Matrix plugins for testing purposes."
-    rm -f /minecraft/plugins/AutoKiller-*.jar /minecraft/plugins/Bolty-*.jar \
+    echo "[INFO] Ranked server detected... removing Ingame, Events, AutoKiller, Bolty and Matrix plugins for testing purposes."
+    rm -f /minecraft/plugins/ingame.jar /minecraft/plugins/Events.jar \
+        /minecraft/plugins/AutoKiller-*.jar /minecraft/plugins/Bolty-*.jar \
         /minecraft/plugins/Matrix-*.jar
 fi
 
