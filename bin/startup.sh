@@ -54,7 +54,3 @@ if [[ -f "$INGAME" ]]; then
 fi
 
 sed -i "s/%TAB-ENABLED%/$TAB_ENABLED/g" plugins/PGM/config.yml
-
-# remove all plugins during testing
-rm -rf /minecraft/plugins/
-
