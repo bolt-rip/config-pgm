@@ -1,0 +1,65 @@
+
+
+# These are a list of server IDs that are forcefully disabled on this server.
+# Just add one of the corresponding mod IDS to this list.
+
+# Mod Ids: (Last Updated: 02/04/2021)
+# one_seven_visuals - 1.7 Visuals
+# fps - FPS
+# cps - CPS
+# skyblockAddons - Skyblock Addons
+# toggleSneak - Toggle Sneak/Sprint
+# hypixel_mod - Hypixel Mods
+# armorstatus - Armor Status
+# keystrokes - Key Strokes
+# coords - Coordinates
+# crosshair - Crosshair
+# potioneffects - Potion Effects
+# directionhud - Direction HUD
+# waypoints - Waypoints
+# scoreboard - Scoreboard
+# potion_counter - Potion Counter
+# ping - Ping
+# motionBlur - Motion Blur
+# chat - Chat
+# scrollable_tooltips - Scrollable Tooltips
+# uhc_overlay - UHC Overlay
+# particleMultiplierMod - Particle Multiplier
+# cooldowns - Cooldowns
+# worldedit_cui - WorldEdit CUI
+# clock - Clock
+# stopwatch - Stopwatch
+# memory - Memory Usage
+# combo - Combo Counter
+# range - Reach Display
+# time_changer - Time Changer
+# serverAddressMod - Server Address
+# saturation - Saturation
+# itemPhysic - Item Physics
+# itemTrackerChild - Item Tracker
+# shinyPots - Shiny Pots
+# block_outline - Block Outline
+# screenshot - Screenshot Uploader
+# fov_mod - FOV Mod
+# textHotKey - Auto Text Hot Key
+# netgraph - Net Graph
+# mumble-link - Mumble Link
+# bossbar - Boss Bar
+# freelook - Freelook
+force-disabled-mods: []
+
+
+# The server rules that the server forces for the Lunar Client player.
+# A lot of these are cosmetics, and don't affect gameplay.
+server-rules:
+  SERVER_HANDLES_WAYPOINTS: false
+  COMPETITIVE_GAME: false
+  SHADERS_DISABLED: false
+  LEGACY_ENCHANTING: false
+  LEGACY_COMBAT: true
+
+
+# All of the fields with there types MUST be here for each waypoint,
+# otherwise the plugin will likely not work when loading.
+# Here is an example of one:
+waypoints: []
