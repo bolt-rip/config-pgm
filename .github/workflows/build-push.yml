@@ -47,6 +47,17 @@ jobs:
             mvn -q dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=it.ytnoos.lpx:LPX:2.4.3-MORTAL -Ddest=plugins/
             mvn -q dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=oc.tc:Morpheus:1.0.1-SNAPSHOT -Ddest=plugins/
 
+      - name: Download SportPaper
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          workflow: build.yml
+          workflow_conclusion: success
+          branch: master
+          name: sportpaper-1.8.8-R0.1-SNAPSHOT
+          path: .
+          repo: bolt-rip/SportPaper
+
       - name: Delete useless files and directories
         run: |
             rm -rf maps/.git scrimmage-maps/.git .git .github .gitignore maps/.github scrimmage-maps/.gitignore scrimmage-maps/README.md
