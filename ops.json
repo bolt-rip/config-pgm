@@ -40,5 +40,17 @@
     "name": "Pibo",
     "level": 4,
     "bypassesPlayerLimit": true
+  },
+  {
+    "uuid": "d71152ca-187d-43c4-9901-ba001606c655",
+    "name": "wylt",
+    "level": 4,
+    "bypassesPlayerLimit": true
+  },
+  {
+    "uuid": "45b61852-eacd-4cee-8e6d-1c96f8213b02",
+    "name": "Heirokos",
+    "level": 4,
+    "bypassesPlayerLimit": true
   }
 ]
