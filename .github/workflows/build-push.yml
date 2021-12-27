@@ -62,6 +62,18 @@ jobs:
         run: |
             rm -rf maps/.git scrimmage-maps/.git .git .github .gitignore maps/.github scrimmage-maps/.gitignore scrimmage-maps/README.md
 
+      - name: Push image
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.GH_TOKEN }}
+        with:
+          source-directory: '.'
+          destination-github-username: 'bolt-rip'
+          destination-repository-name: 'config-pgm-image'
+          user-email: bot@bolt.rip
+          target-branch: master
+          commit-message: ORIGIN_COMMIT
+
       - name: Publish to Registry
         uses: docker://lgohr/publish-docker-github-action:20210118133633a73f0f
         with:
