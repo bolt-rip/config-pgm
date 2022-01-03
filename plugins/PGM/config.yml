@@ -230,7 +230,7 @@ groups:
     # Display name of the group - Displayed when hovering over prefix/suffix
     display-name: "&cTechnical Moderator"
     # Description of group - Displayed when hovering over prefix/suffix
-    description: "&7Makes sure non-BAC users are not cheating"
+    description: "&7Enforces rules and makes sure users are not cheating"
     permissions:
       - "+commandbook.teleport.*"
       - "+worldedit.butcher.*"
