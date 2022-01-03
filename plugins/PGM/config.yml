@@ -324,6 +324,7 @@ groups:
       - "+ingame.staff.status"
       - "+ingame.staff.cancel"
       - "+pgm.gameplay"
+      - "+pgm.mod"
       - "+worldedit.butcher"
       - "+worldedit.drain"
       - "+worldedit.extinguish"
