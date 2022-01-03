@@ -143,13 +143,6 @@ groups:
     display-name: "&8&lUnranked"
     description: "&7This flair is only shown when playing a match"
 
-  tm3:
-    prefix: "&5*"
-    permissions:
-      - "+pgm.premium"
-    observer-permissions: []
-    participant-permissions: []
-
   developer:
     prefix: "&5✵"
     # Display name of the group - Displayed when hovering over prefix/suffix
@@ -306,6 +299,37 @@ groups:
       - "+matrix.verbose"
       - "+matrix.violations"
       - "+matrix.ping"
+
+  godzilla:
+    prefix: "&9✻"
+    # Display name of the group - Displayed when hovering over prefix/suffix
+    display-name: "&9Godzilla Staff"
+    # Description of group - Displayed when hovering over prefix/suffix
+    description: "&7Is part of the Godzilla Rankeds staff team"
+    permissions:
+      - "+commandbook.teleport.*"
+      - "+worldedit.butcher.*"
+      - "+worldedit.clipboard.*"
+      - "+worldedit.history.*"
+      - "+worldedit.navigation.*"
+      - "+worldedit.region.*"
+      - "+worldedit.selection.*"
+      - "+commandbook.gamemode"
+      - "+commandbook.gamemode.change"
+      - "+commandbook.slap"
+      - "+commandbook.slap.other"
+      - "+commandbook.teleport.other"
+      - "+events.spectate"
+      - "+ingame.staff.match"
+      - "+ingame.staff.status"
+      - "+ingame.staff.cancel"
+      - "+pgm.gameplay"
+      - "+worldedit.butcher"
+      - "+worldedit.drain"
+      - "+worldedit.extinguish"
+      - "+worldedit.remove"
+      - "+worldedit.searchitem"
+      - "+worldedit.wand"
 
   # A special group for all players.
   #
