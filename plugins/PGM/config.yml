@@ -140,7 +140,7 @@ groups:
   d_plus:
     prefix: "&a&lD+ "
     display-name: "&a&lD+ Rank"
-    description: "&7This player is currently placed within &a&l500-599 &r&7SR."
+    description: "&7This player is currently placed within &a&l500-999 &r&7SR."
     click-link: "https://bolt.rip/leaderboards"
   d:
     prefix: "&a&lD "
