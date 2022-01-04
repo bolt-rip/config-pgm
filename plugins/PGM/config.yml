@@ -106,52 +106,52 @@ groups:
     prefix: "&c&lS "
     display-name: "&c&lS Rank"
     description: "&7This player is currently placed within &c&l4000-5000 &r&7SR."
-    click-link: "View the leaderboard at https://bolt.rip/leaderboards"
+    click-link: "https://bolt.rip/leaderboards"
   a_plus:
     prefix: "&e&lA+ "
     display-name: "&e&lA+ Rank"
     description: "&7This player is currently placed within &e&l3500-3999 &r&7SR."
-    click-link: "View the leaderboard at https://bolt.rip/leaderboards"
+    click-link: "https://bolt.rip/leaderboards"
   a:
     prefix: "&e&lA "
     display-name: "&e&lA Rank"
     description: "&7This player is currently placed within &e&l3000-3499 &r&7SR."
-    click-link: "View the leaderboard at https://bolt.rip/leaderboards"
+    click-link: "https://bolt.rip/leaderboards"
   b_plus:
     prefix: "&7&lB+ "
     display-name: "&7&lB+ Rank"
     description: "&7This player is currently placed within &l2500-2999 SR."
-    click-link: "View the leaderboard at https://bolt.rip/leaderboards"
+    click-link: "https://bolt.rip/leaderboards"
   b:
     prefix: "&7&lB "
     display-name: "&7&lB Rank"
     description: "&7This player is currently placed within &l2000-2499 SR."
-    click-link: "View the leaderboard at https://bolt.rip/leaderboards"
+    click-link: "https://bolt.rip/leaderboards"
   c_plus:
     prefix: "&6&lC+ "
     display-name: "&6&lC+ Rank"
     description: "&7This player is currently placed within &6&l1500-1999 &r&7SR."
-    click-link: "View the leaderboard at https://bolt.rip/leaderboards"
+    click-link: "https://bolt.rip/leaderboards"
   c:
     prefix: "&6&lC "
     display-name: "&6&lC Rank"
     description: "&7This player is currently placed within &6&l1000-1499 &r&7SR."
-    click-link: "View the leaderboard at https://bolt.rip/leaderboards"
+    click-link: "https://bolt.rip/leaderboards"
   d_plus:
     prefix: "&a&lD+ "
     display-name: "&a&lD+ Rank"
     description: "&7This player is currently placed within &a&l500-599 &r&7SR."
-    click-link: "View the leaderboard at https://bolt.rip/leaderboards"
+    click-link: "https://bolt.rip/leaderboards"
   d:
     prefix: "&a&lD "
     display-name: "&a&lD Rank"
     description: "&7This player is currently placed within &a&l0-499 &r&7SR."
-    click-link: "View the leaderboard at https://bolt.rip/leaderboards"
+    click-link: "https://bolt.rip/leaderboards"
   unranked:
     prefix: "&8&l- "
     display-name: "&8&lUnranked"
     description: "&7This player is not placed in any SR range."
-    click-link: "View the leaderboard at https://bolt.rip/leaderboards"
+    click-link: "https://bolt.rip/leaderboards"
 
   developer:
     prefix: "&5✵"
