@@ -126,9 +126,9 @@ paper:
     # Use async lighting updates
     use-async-lighting: true
   knockback:
-    friction: 1.95
-    horizontal: 0.385
+    friction: 1.93
+    horizontal: 0.388
     vertical: 0.37
-    vertical-limit: 0.435
-    extra-horizontal: 0.425
+    vertical-limit: 0.4355
+    extra-horizontal: 0.427
     extra-vertical: 0.09
