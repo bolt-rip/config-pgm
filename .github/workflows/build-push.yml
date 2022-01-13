@@ -17,18 +17,12 @@ jobs:
       - name: Git checkout main repo
         uses: actions/checkout@v2
 
-      - name: Git checkout OCC scrimmage maps
+      - name: Git checkout competitive maps
         uses: actions/checkout@v2
         with:
-          repository: OvercastCommunity/scrimmage-maps
-          path: scrimmage-maps
-
-      - name: Git checkout bolt maps
-        uses: actions/checkout@v2
-        with:
-          repository: bolt-rip/maps
+          repository: OvercastCommunity/competitive-maps
           token: ${{ secrets.GHR_PASSWORD }}
-          path: maps
+          path: competitive-maps
 
       - name: Set up Maven
         uses: actions/setup-java@v1

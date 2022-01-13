@@ -15,8 +15,7 @@ map:
     #    maps/
     #
     # See the example above, folders are relative to the server folder.
-    - "scrimmage-maps"
-    - "maps"
+    - "competitive-maps"
 
     # A special "default" source that downloads 5 "classic" maps.
     #
