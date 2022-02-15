@@ -40,6 +40,7 @@ jobs:
             mvn -q dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=me.rerere.matrix:Matrix:6.6.0 -Ddest=plugins/
             mvn -q dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=it.ytnoos.lpx:LPX:2.7.5-MORTAL -Ddest=plugins/
             mvn -q dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=oc.tc:Morpheus:1.0.1-SNAPSHOT -Ddest=plugins/
+            mvn -q dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=me.pablete1234:KitRecommender:1.0-SNAPSHOT -Ddest=plugins/
 
       - name: Download SportPaper
         uses: dawidd6/action-download-artifact@v2
