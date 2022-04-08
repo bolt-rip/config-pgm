@@ -1,5 +1,5 @@
 # Whether idle players are kicked or not
-enabled: false
+enabled: true
 
 # What to do when player is marked as inactive:
 # true = Kick from server
