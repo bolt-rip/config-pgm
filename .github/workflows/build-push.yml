@@ -3,7 +3,7 @@ name: Docker
 on:
   push:
     branches:
-      - master 
+      - master
   pull_request:
   repository_dispatch:
     types:
@@ -37,10 +37,15 @@ jobs:
 
       - name: Download private plugins from repsy
         run: |
-            mvn -q dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=me.rerere.matrix:Matrix:6.6.0 -Ddest=plugins/
-            mvn -q dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=it.ytnoos.lpx:LPX:2.7.5-MORTAL -Ddest=plugins/
-            mvn -q dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=oc.tc:Morpheus:1.0.1-SNAPSHOT -Ddest=plugins/
-            mvn -q dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=me.pablete1234:KitRecommender:1.1 -Ddest=plugins/
+          mvn -q dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=me.rerere.matrix:Matrix:6.6.0 -Ddest=plugins/
+          mvn -q dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=it.ytnoos.lpx:LPX:2.7.5-MORTAL -Ddest=plugins/
+          mvn -q dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=oc.tc:Morpheus:1.0.1-SNAPSHOT -Ddest=plugins/
+          mvn -q dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=me.pablete1234:KitRecommender:1.1 -Ddest=plugins/
+
+      - name: Download Idly
+        working-directory: plugins
+        run: |
+          wget --content-disposition -q $(curl -sL https://api.github.com/repos/applenick/Idly/releases/latest | jq -r '.assets[].browser_download_url')
 
       - name: Download SportPaper
         uses: dawidd6/action-download-artifact@v2
@@ -55,16 +60,16 @@ jobs:
 
       - name: Delete useless files and directories
         run: |
-            rm -rf competitive-maps/.git .git .github .gitignore competitive-maps/.github competitive-maps/.gitignore competitive-maps/README.md competitive-maps/_imaging_edits
+          rm -rf competitive-maps/.git .git .github .gitignore competitive-maps/.github competitive-maps/.gitignore competitive-maps/README.md competitive-maps/_imaging_edits
 
       - name: Push image
         uses: cpina/github-action-push-to-another-repository@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.GH_TOKEN }}
         with:
-          source-directory: '.'
-          destination-github-username: 'bolt-rip'
-          destination-repository-name: 'config-pgm-image'
+          source-directory: "."
+          destination-github-username: "bolt-rip"
+          destination-repository-name: "config-pgm-image"
           user-email: bot@bolt.rip
           target-branch: master
           commit-message: ORIGIN_COMMIT

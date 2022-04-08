@@ -29,10 +29,12 @@ if [ -n "$OPERATORS" ]; then
 fi
 
 if [ "$CHART_NAME" != "ranked" ]; then
-    echo "[INFO] Not a ranked server detected... removing Ingame, Events, AutoKiller, Bolty and Matrix plugins."
+    echo "[INFO] Not a ranked server detected... removing Ingame, Events, AutoKiller, Bolty, Matrix and Idly plugins."
     rm -f /minecraft/plugins/ingame.jar /minecraft/plugins/Events.jar \
         /minecraft/plugins/AutoKiller-*.jar /minecraft/plugins/Bolty-*.jar \
-        /minecraft/plugins/Matrix-*.jar
+        /minecraft/plugins/Matrix-*.jar \
+        /minecraft/plugins/Idly.jar
+
 fi
 
 if [ "$CHART_NAME" = "privateserver" ]; then
