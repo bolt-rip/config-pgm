@@ -52,5 +52,23 @@
     "name": "Heirokos",
     "level": 4,
     "bypassesPlayerLimit": true
+  },
+  {
+    "uuid": "621b2aa8-4e5f-4ed8-bd36-0ae2f8952a06",
+    "name": "Strangey",
+    "level": 4,
+    "bypassesPlayerLimit": true
+  },
+  {
+    "uuid": "430ec559-364a-4363-ac7a-2529050440ac",
+    "name": "mameBT",
+    "level": 4,
+    "bypassesPlayerLimit": true
+  },
+  {
+    "uuid": "e64855e0-a481-4f65-8194-d19d70544e31",
+    "name": "ihtow",
+    "level": 4,
+    "bypassesPlayerLimit": true
   }
 ]
