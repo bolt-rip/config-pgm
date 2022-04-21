@@ -224,49 +224,6 @@ groups:
       - "+matrix.violations"
       - "+matrix.ping"
 
-  techmod:
-    prefix: "&c✵"
-    # Display name of the group - Displayed when hovering over prefix/suffix
-    display-name: "&cTechnical Moderator"
-    # Description of group - Displayed when hovering over prefix/suffix
-    description: "&7Enforces rules and makes sure users are not cheating"
-    permissions:
-      - "+commandbook.teleport.*"
-      - "+worldedit.butcher.*"
-      - "+worldedit.clipboard.*"
-      - "+worldedit.history.*"
-      - "+worldedit.navigation.*"
-      - "+worldedit.region.*"
-      - "+worldedit.selection.*"
-      - "+commandbook.gamemode"
-      - "+commandbook.gamemode.change"
-      - "+commandbook.slap"
-      - "+commandbook.slap.other"
-      - "+commandbook.teleport.other"
-      - "+events.spectate"
-      - "+ingame.staff.match"
-      - "+ingame.staff.status"
-      - "+ingame.staff.cancel"
-      - "+ingame.staff.ban"
-      - "+minecraft.command.banlist"
-      - "+minecraft.command.kick"
-      - "+minecraft.command.pardon"
-      - "+pgm.gameplay"
-      - "+pgm.mod"
-      - "+worldedit.butcher"
-      - "+worldedit.drain"
-      - "+worldedit.extinguish"
-      - "+worldedit.remove"
-      - "+worldedit.searchitem"
-      - "+worldedit.wand"
-      - "+autokiller.staff"
-      - "+matrix.command"
-      - "+matrix.gui"
-      - "+matrix.notify"
-      - "+matrix.verbose"
-      - "+matrix.violations"
-      - "+matrix.ping"
-
   moderator:
     prefix: "&c❖"
     # Display name of the group - Displayed when hovering over prefix/suffix
@@ -366,19 +323,16 @@ groups:
     observer-permissions:
       - "+worldedit.navigation.*"
       - "+commandbook.teleport"
+      - "+community.teleport"
       - "+matrix.bypass"
+      - "+community.freeze.exempt"
     # A list of permissions, only when a player is participating.
     participant-permissions:
       - "-worldedit.navigation.thru.tool"
       - "-worldedit.navigation.jumpto.tool"
       - "-commandbook.teleport"
-
-# Enables "community mode" with features such as /report, /freeze, /warn, and /ban.
-community:
-  enabled: true # Is community mode enabled?
-  server-name: "" # Name of your server, displayed when players are kicked.
-  rules-link: "" # A URL to a rules website, displayed when players are kicked.
-  appeal-msg: "" # A message, displayed on the kick screen, if a player is banned.
+      - "-community.teleport"
+      - "-community.teleport.others"
 
 # Overrides the default database uri.
 #
