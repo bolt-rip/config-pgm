@@ -7,7 +7,7 @@ enabled: true
 kick-mode: true
 
 # Amount of time (in seconds) before participant is kicked
-participant-delay: 30
+participant-delay: 45
 
 # Amount of time (in seconds) before observer is kicked
 # (only works when kick-mode is true)
@@ -20,7 +20,7 @@ warning-duration: 15
 warning-frequency: 5
 
 # Only check for inactivity when match is running
-require-match-running: false
+require-match-running: true
 
 # Allow player bypass with 'idly.bypass' permission
 bypass-enabled: false
