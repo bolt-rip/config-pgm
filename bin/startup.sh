@@ -13,9 +13,9 @@ if [ "$CHART_NAME" == "ranked" ]; then
 fi
 
 if [ -n "$MAX_PLAYERS" ]; then
-        echo "[INFO] Changing the maximum of players."
-        sed -i '/max-players/d' /minecraft/server.properties
-        echo "max-players=${MAX_PLAYERS}" >> /minecraft/server.properties
+    echo "[INFO] Changing the maximum of players."
+    sed -i '/max-players/d' /minecraft/server.properties
+    echo "max-players=${MAX_PLAYERS}" >> /minecraft/server.properties
 fi
 
 if [ -n "$OPERATORS" ]; then
