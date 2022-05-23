@@ -34,7 +34,7 @@ map:
 #
 # See the examples above for how to format durations.
 countdown:
-  start: "30s" # After a match cycles or /start
+  start: %START-TIME% # After a match cycles or /start
   cycle: -1 # After a match ends or /cycle
   huddle: -1 # Before a match starts (only recommended for "ranked" matches)
   restart: "20s" # After a restart countdown is queued or /qr
@@ -44,7 +44,7 @@ countdown:
 # Set to -1 to disable either of these options.
 restart:
   uptime: -1 # Queues a restart after this amount of time has elapsed.
-  match-limit: 6 # Queues a restart after this amount of matches.
+  match-limit: %MATCH-LIMIT% # Queues a restart after this amount of matches.
 
 # Changes behaviour when players try to /join a match.
 join:
@@ -70,7 +70,7 @@ ui:
 # Changes how stats are shown.
 stats:
   verbose: true # Enable more detailed stats?
-  show-after: -1 # How long to wait after the match ends to show stats?
+  show-after: %STATS-RETURN% # How long to wait after the match ends to show stats?
   show-best: true # Should show best players stats?
   show-own: true # Should show each players own stats?
 
