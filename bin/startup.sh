@@ -7,9 +7,8 @@ if [ "$CHART_NAME" == "ranked" ]; then
     cp plugins/Bolty/config-readonly.yml plugins/Bolty/config.yml
     sed -i "s/%SERVER-NAME%/$SERVER_NAME/g" plugins/Bolty/config.yml
     echo "[INFO] Ranked server detected... updating PGM config."
-    sed -i 's/%START-TIME%/"30s"/g' plugins/PGM/config.yml
+    sed -i "s/%START-TIME%/30s/g" plugins/PGM/config.yml
     sed -i "s/%MATCH-LIMIT%/6/g" plugins/PGM/config.yml
-    sed -i "s/%STATS-RETURN%/-1/g" plugins/PGM/config.yml
 fi
 
 if [ -n "$MAX_PLAYERS" ]; then
@@ -40,7 +39,6 @@ if [ "$CHART_NAME" != "ranked" ]; then
         /minecraft/plugins/Idly.jar
     sed -i "s/%START-TIME%/-1/g" plugins/PGM/config.yml
     sed -i "s/%MATCH-LIMIT%/-1/g" plugins/PGM/config.yml
-    sed -i 's/%STATS-RETURN%/"3s"/g' plugins/PGM/config.yml
 fi
 
 if [ "$CHART_NAME" = "privateserver" ]; then
@@ -54,11 +52,14 @@ if [ "$NODE_NAME" != "ns522982" ]; then
     rm -f /minecraft/plugins/LPX-*.jar /minecraft/plugins/Matrix-*.jar
 fi
 
-# disable PGM tablist if ingame exists
+# disable PGM tablist and stats return if ingame exists
 TAB_ENABLED=true
+STATS_RETURN=6s
 INGAME=/minecraft/plugins/ingame.jar
 if [[ -f "$INGAME" ]]; then
     TAB_ENABLED=false
+    STATS_RETURN=-1
 fi
 
 sed -i "s/%TAB-ENABLED%/$TAB_ENABLED/g" plugins/PGM/config.yml
+sed -i "s/%STATS-RETURN%/$STATS_RETURN/g" plugins/PGM/config.yml
