@@ -21,10 +21,10 @@ WORKDIR /minecraft/plugins
 
 RUN ash -c "wget --content-disposition -q $(curl -sL https://api.github.com/repos/bolt-rip/ingame/releases/latest | jq -r '.assets[].browser_download_url') \
             $(curl -sL https://api.github.com/repos/bolt-rip/AntiAFK/releases/latest | jq -r '.assets[].browser_download_url') \
-            $(curl -sL https://api.github.com/repos/PGMDev/Events/releases/latest | jq -r '.assets[].browser_download_url') \
+            $(curl -sL https://api.github.com/repos/bolt-rip/Events/releases/latest | jq -r '.assets[].browser_download_url') \
             $(curl -sL https://api.github.com/repos/applenick/autokiller/releases/latest | jq -r '.assets[].browser_download_url') \
             $(curl -sL https://api.github.com/repos/applenick/Bolty/releases/latest | jq -r '.assets[].browser_download_url') \
-            https://pkg.ashcon.app/pgm"
+            https://cdn.discordapp.com/attachments/831301239584325713/987467782495043615/PGM.jar"
             
 WORKDIR /minecraft
 
