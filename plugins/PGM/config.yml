@@ -234,7 +234,6 @@ groups:
     # Description of group - Displayed when hovering over prefix/suffix
     description: "&7Is either in charge of moderation or maps"
     permissions:
-      - "+commandbook.teleport.*"
       - "+worldedit.butcher.*"
       - "+worldedit.clipboard.*"
       - "+worldedit.history.*"
@@ -245,7 +244,8 @@ groups:
       - "+commandbook.gamemode.change"
       - "+commandbook.slap"
       - "+commandbook.slap.other"
-      - "+commandbook.teleport.other"
+      - "+community.teleport"
+      - "+community.teleport.others"
       - "+events.spectate"
       - "+ingame.staff.match"
       - "+ingame.staff.status"
@@ -294,7 +294,6 @@ groups:
     click-link: "https://oc.tc/staff"
   moderator: # BOLT specific, perms for both Sr. Mod and Mod
     permissions:
-      - "+commandbook.teleport.*"
       - "+worldedit.butcher.*"
       - "+worldedit.clipboard.*"
       - "+worldedit.history.*"
@@ -305,7 +304,8 @@ groups:
       - "+commandbook.gamemode.change"
       - "+commandbook.slap"
       - "+commandbook.slap.other"
-      - "+commandbook.teleport.other"
+      - "+community.teleport"
+      - "+community.teleport.others"
       - "+events.spectate"
       - "+ingame.staff.match"
       - "+ingame.staff.status"
@@ -346,7 +346,6 @@ groups:
     # Description of group - Displayed when hovering over prefix/suffix
     description: "&7Is part of the Godzilla Rankeds staff team"
     permissions:
-      - "+commandbook.teleport.*"
       - "+worldedit.butcher.*"
       - "+worldedit.clipboard.*"
       - "+worldedit.history.*"
@@ -357,7 +356,8 @@ groups:
       - "+commandbook.gamemode.change"
       - "+commandbook.slap"
       - "+commandbook.slap.other"
-      - "+commandbook.teleport.other"
+      - "+community.teleport"
+      - "+community.teleport.others"
       - "+events.spectate"
       - "+ingame.staff.match"
       - "+ingame.staff.status"
@@ -394,7 +394,7 @@ groups:
     # A list of permissions, only when a player is observing.
     observer-permissions:
       - "+worldedit.navigation.*"
-      - "+commandbook.teleport"
+      - "+community.teleport"
       - "+matrix.bypass"
     # A list of permissions, only when a player is participating.
     participant-permissions:
