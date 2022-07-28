@@ -251,7 +251,6 @@ groups:
       - "+ingame.staff.status"
       - "+ingame.staff.cancel"
       - "+ingame.staff.ban"
-      - "+bac.admin.enforce"
       - "+minecraft.command.banlist"
       - "+minecraft.command.kick"
       - "+minecraft.command.pardon"
@@ -302,8 +301,6 @@ groups:
       - "+worldedit.selection.*"
       - "+commandbook.gamemode"
       - "+commandbook.gamemode.change"
-      - "+commandbook.slap"
-      - "+commandbook.slap.other"
       - "+community.teleport"
       - "+community.teleport.others"
       - "+events.spectate"
@@ -354,8 +351,6 @@ groups:
       - "+worldedit.selection.*"
       - "+commandbook.gamemode"
       - "+commandbook.gamemode.change"
-      - "+commandbook.slap"
-      - "+commandbook.slap.other"
       - "+community.teleport"
       - "+community.teleport.others"
       - "+events.spectate"
@@ -396,6 +391,7 @@ groups:
       - "+worldedit.navigation.*"
       - "+community.teleport"
       - "+matrix.bypass"
+      - "+community.freeze.exempt"
     # A list of permissions, only when a player is participating.
     participant-permissions:
       - "-worldedit.navigation.thru.tool"
