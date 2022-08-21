@@ -101,6 +101,7 @@ motd: ""
 #
 # Each group is assigned the permission "pgm.group.<name>".
 groups:
+# BOLT ranks
   s:
     prefix: "&c&lS "
     display-name: "&c&lS Rank"
@@ -151,8 +152,62 @@ groups:
     display-name: "&8&lUnranked"
     description: "&7This player is not placed in any SR range."
     click-link: "https://bolt.rip/leaderboards"
-
-  developer:
+# Miscellaneous
+  sponsor:
+    prefix: '&e+'
+    display-name: '&eSponsor'
+    description: "&7Supported the server by donating &d❤"
+    click-link: "https://octc.buycraft.net"
+  donor:
+    prefix: '&a*'
+    display-name: '&aDonor'
+    description: "&7Supported the server by donating &d❤"
+    click-link: "https://octc.buycraft.net"
+  mapmaker:
+    prefix: '&9*'
+    display-name: "&9Map Author"
+    description: "&7Created the currently playing map"
+  if:
+    prefix: '&1*'
+    display-name: '&9Internet Famous'
+    description: "&7Famous person from the internet"
+  contributor:
+    prefix: '&3*'
+    display-name: '&3Contributor'
+    description: "&7Contributed to &4Overcast&7 through events or development efforts"
+  supreme-overlord:
+    prefix: '&4*'
+    display-name: '&4Supreme Overlord'
+    description: "&7A notable person from the &e&lOvercast &4&lNetwork"
+    click-link: "https://oc.tc"
+  completionist-10:
+    prefix: '&c*'
+    display-name: '&6Completionist'
+    description: '&7Completed the &eSeason 10 &6&lBattle Pass'
+  completionist-9:
+    prefix: '&6*'
+    display-name: '&6Completionist'
+    description: '&7Completed the &eSeason 9 &6&lBattle Pass'
+  completionist-8:
+    prefix: '&e*'
+    display-name: '&6Completionist'
+    description: '&7Completed the &eSeason 8 &6&lBattle Pass'
+  builder:
+    prefix: '&b*'
+    display-name: '&bBuilder'
+    description: "&7Official builder for &4Overcast &7Community"
+    click-link: "https://oc.tc/staff"
+  mapmaker-winner:
+    prefix: '&0*'
+    display-name: '&6Bolt Mapmaking Winner'
+    description: "&7First place winner of the &eBolt &7Mapmaking Contest"
+  nitro:
+    prefix: '&d*'
+    display-name: '&dNitro Booster'
+    description: "&7Boosted the &4Overcast &7Community &7discord &d❤"
+    click-link: "https://oc.tc/discord"
+# Staff ranks
+  developer: # BOLT specific
     prefix: "&5✵"
     # Display name of the group - Displayed when hovering over prefix/suffix
     display-name: "&5Developer"
@@ -162,7 +217,6 @@ groups:
       - "+nerve.*"
       - "+spark.*"
       - "+*"
-      - "+bac.bypass"
       - "+events.spectate"
       - "+minecraft.command.gamemode"
       - "+nettle.staff"
@@ -175,18 +229,15 @@ groups:
       - "+ingame.staff.cancel"
       - "+ingame.staff.ban"
       - "+events.*"
-      - "+bac.admin.enforce"
       - "+spark"
       - "+autokiller.staff"
-
-  manager:
+  manager: # BOLT specific
     prefix: "&4✵"
     # Display name of the group - Displayed when hovering over prefix/suffix
     display-name: "&4Manager"
     # Description of group - Displayed when hovering over prefix/suffix
     description: "&7Is either in charge of moderation or maps"
     permissions:
-      - "+commandbook.teleport.*"
       - "+worldedit.butcher.*"
       - "+worldedit.clipboard.*"
       - "+worldedit.history.*"
@@ -197,13 +248,13 @@ groups:
       - "+commandbook.gamemode.change"
       - "+commandbook.slap"
       - "+commandbook.slap.other"
-      - "+commandbook.teleport.other"
+      - "+community.teleport"
+      - "+community.teleport.others"
       - "+events.spectate"
       - "+ingame.staff.match"
       - "+ingame.staff.status"
       - "+ingame.staff.cancel"
       - "+ingame.staff.ban"
-      - "+bac.admin.enforce"
       - "+minecraft.command.banlist"
       - "+minecraft.command.kick"
       - "+minecraft.command.pardon"
@@ -224,15 +275,33 @@ groups:
       - "+matrix.verbose"
       - "+matrix.violations"
       - "+matrix.ping"
-
-  moderator:
-    prefix: "&c❖"
-    # Display name of the group - Displayed when hovering over prefix/suffix
-    display-name: "&cModerator"
-    # Description of group - Displayed when hovering over prefix/suffix
+  admin:
+    prefix: '&6❖'
+    display-name: '&6Administrator'
+    description: "&7In charge of &4Overcast &7Community"
+    click-link: "https://oc.tc/staff"
+  senior:
+    prefix: '&4❖'
+    display-name: '&4Senior Moderator'
+    description: "&7A moderation team leader"
+    click-link: "https://oc.tc/staff"
+  mapdev:
+    prefix: '&9❖'
+    display-name: '&9Map Dev'
+    description: "&7Works on map and pool development"
+    click-link: "https://oc.tc/staff"
+  dev:
+    prefix: '&5❖'
+    display-name: '&5Developer'
+    description: "&7Contributes software enhancements"
+    click-link: "https://oc.tc/staff"
+  mod:
+    prefix: '&c❖'
+    display-name: '&cModerator'
     description: "&7Enforces the rules"
+    click-link: "https://oc.tc/staff"
+  moderator: # BOLT specific, perms for both Sr. Mod and Mod
     permissions:
-      - "+commandbook.teleport.*"
       - "+worldedit.butcher.*"
       - "+worldedit.clipboard.*"
       - "+worldedit.history.*"
@@ -241,9 +310,8 @@ groups:
       - "+worldedit.selection.*"
       - "+commandbook.gamemode"
       - "+commandbook.gamemode.change"
-      - "+commandbook.slap"
-      - "+commandbook.slap.other"
-      - "+commandbook.teleport.other"
+      - "+community.teleport"
+      - "+community.teleport.others"
       - "+events.spectate"
       - "+ingame.staff.match"
       - "+ingame.staff.status"
@@ -267,15 +335,23 @@ groups:
       - "+matrix.verbose"
       - "+matrix.violations"
       - "+matrix.ping"
-
-  godzilla:
+  junior:
+    prefix: '&d❖'
+    display-name: '&dJunior Moderator'
+    description: '&7A moderator in training'
+    click-link: "https://oc.tc/staff"
+  off-duty:
+    prefix: '&7❖'
+    display-name: '&7Off Duty Staff'
+    description: "&7This staff member is currently off-duty"
+    click-link: "https://oc.tc/staff"
+  godzilla: # BOLT specific
     prefix: "&9✻"
     # Display name of the group - Displayed when hovering over prefix/suffix
     display-name: "&9Godzilla Staff"
     # Description of group - Displayed when hovering over prefix/suffix
     description: "&7Is part of the Godzilla Rankeds staff team"
     permissions:
-      - "+commandbook.teleport.*"
       - "+worldedit.butcher.*"
       - "+worldedit.clipboard.*"
       - "+worldedit.history.*"
@@ -284,9 +360,8 @@ groups:
       - "+worldedit.selection.*"
       - "+commandbook.gamemode"
       - "+commandbook.gamemode.change"
-      - "+commandbook.slap"
-      - "+commandbook.slap.other"
-      - "+commandbook.teleport.other"
+      - "+community.teleport"
+      - "+community.teleport.others"
       - "+events.spectate"
       - "+ingame.staff.match"
       - "+ingame.staff.status"
@@ -300,7 +375,6 @@ groups:
       - "+worldedit.remove"
       - "+worldedit.searchitem"
       - "+worldedit.wand"
-
   # A special group for all players.
   #
   # Do *not* remove this group unless you know what you're doing.
@@ -324,13 +398,15 @@ groups:
     # A list of permissions, only when a player is observing.
     observer-permissions:
       - "+worldedit.navigation.*"
-      - "+commandbook.teleport"
+      - "+community.teleport"
       - "+matrix.bypass"
+      - "+community.freeze.exempt"
     # A list of permissions, only when a player is participating.
     participant-permissions:
       - "-worldedit.navigation.thru.tool"
       - "-worldedit.navigation.jumpto.tool"
-      - "-commandbook.teleport"
+      - "-community.teleport"
+      - "-community.teleport.others"
 
 # Overrides the default database uri.
 #
