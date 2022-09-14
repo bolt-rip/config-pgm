@@ -24,7 +24,7 @@ RUN ash -c "wget --content-disposition -q $(curl -sL https://api.github.com/repo
             $(curl -sL https://api.github.com/repos/bolt-rip/Events/releases/latest | jq -r '.assets[].browser_download_url') \
             $(curl -sL https://api.github.com/repos/applenick/autokiller/releases/latest | jq -r '.assets[].browser_download_url') \
             $(curl -sL https://api.github.com/repos/applenick/Bolty/releases/latest | jq -r '.assets[].browser_download_url') \
-            https://cdn.discordapp.com/attachments/831301239584325713/1010646500482764911/PGM.jar"
+            https://cdn.discordapp.com/attachments/831301239584325713/1019694413221478520/PGM.jar"
             
 WORKDIR /minecraft
 
