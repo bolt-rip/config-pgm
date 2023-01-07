@@ -275,6 +275,36 @@ groups:
       - "+matrix.verbose"
       - "+matrix.violations"
       - "+matrix.ping"
+  godzilla: # BOLT specific
+    prefix: "&9✻"
+    # Display name of the group - Displayed when hovering over prefix/suffix
+    display-name: "&9Godzilla Staff"
+    # Description of group - Displayed when hovering over prefix/suffix
+    description: "&7Is part of the Godzilla Rankeds staff team"
+    permissions:
+      - "+worldedit.butcher.*"
+      - "+worldedit.clipboard.*"
+      - "+worldedit.history.*"
+      - "+worldedit.navigation.*"
+      - "+worldedit.region.*"
+      - "+worldedit.selection.*"
+      - "+commandbook.gamemode"
+      - "+commandbook.gamemode.change"
+      - "+community.teleport"
+      - "+community.teleport.others"
+      - "+events.spectate"
+      - "+ingame.staff.match"
+      - "+ingame.staff.status"
+      - "+ingame.staff.cancel"
+      - "+pgm.gameplay"
+      - "+pgm.mod"
+      - "+community.mute"
+      - "+worldedit.butcher"
+      - "+worldedit.drain"
+      - "+worldedit.extinguish"
+      - "+worldedit.remove"
+      - "+worldedit.searchitem"
+      - "+worldedit.wand"
   admin:
     prefix: '&6❖'
     display-name: '&6Administrator'
@@ -345,36 +375,6 @@ groups:
     display-name: '&7Off Duty Staff'
     description: "&7This staff member is currently off-duty"
     click-link: "https://oc.tc/staff"
-  godzilla: # BOLT specific
-    prefix: "&9✻"
-    # Display name of the group - Displayed when hovering over prefix/suffix
-    display-name: "&9Godzilla Staff"
-    # Description of group - Displayed when hovering over prefix/suffix
-    description: "&7Is part of the Godzilla Rankeds staff team"
-    permissions:
-      - "+worldedit.butcher.*"
-      - "+worldedit.clipboard.*"
-      - "+worldedit.history.*"
-      - "+worldedit.navigation.*"
-      - "+worldedit.region.*"
-      - "+worldedit.selection.*"
-      - "+commandbook.gamemode"
-      - "+commandbook.gamemode.change"
-      - "+community.teleport"
-      - "+community.teleport.others"
-      - "+events.spectate"
-      - "+ingame.staff.match"
-      - "+ingame.staff.status"
-      - "+ingame.staff.cancel"
-      - "+pgm.gameplay"
-      - "+pgm.mod"
-      - "+community.mute"
-      - "+worldedit.butcher"
-      - "+worldedit.drain"
-      - "+worldedit.extinguish"
-      - "+worldedit.remove"
-      - "+worldedit.searchitem"
-      - "+worldedit.wand"
   # A special group for all players.
   #
   # Do *not* remove this group unless you know what you're doing.
