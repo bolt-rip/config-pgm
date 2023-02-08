@@ -39,7 +39,7 @@ jobs:
         run: |
           mvn -q dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=me.rerere.matrix:Matrix:6.6.0 -Ddest=plugins/
           mvn -q dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=it.ytnoos.lpx:LPX:2.7.5-MORTAL -Ddest=plugins/
-          mvn -q dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=tc.oc:Morpheus:1.0.2-SNAPSHOT -Ddest=plugins/
+          mvn -q dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=tc.oc:Morpheus:1.0.3-SNAPSHOT -Ddest=plugins/
           mvn -q dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=me.pablete1234:KitRecommender:1.1 -Ddest=plugins/
 
       - name: Download Idly
