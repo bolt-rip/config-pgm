@@ -26,7 +26,7 @@ map:
   pools: "map-pools.yml"
   
   # A path to the includes folder, or empty to disable map includes.	
-  includes: "competitive-maps/includes"
+  includes: "../../competitive-maps/includes"
 
 # Sets the duration of various countdowns.
 #
