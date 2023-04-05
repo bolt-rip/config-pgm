@@ -4,8 +4,9 @@ sed -i "s/%SERVER-NAME%/$SERVER_NAME/g" plugins/PGM/config.yml
 
 if [ "$CHART_NAME" == "ranked" ]; then
     # temporary hack due to configmap being read only, need to be fixed
-    cp plugins/Bolty/config-readonly.yml plugins/Bolty/config.yml
-    sed -i "s/%SERVER-NAME%/$SERVER_NAME/g" plugins/Bolty/config.yml
+    # Also, k8s still uses bolty naming, so migrate that manually
+    cp plugins/Bolty/config-readonly.yml plugins/Cheaty/config.yml
+    sed -i "s/%SERVER-NAME%/$SERVER_NAME/g" plugins/Cheaty/config.yml
 fi
 
 if [ -n "$MAX_PLAYERS" ]; then
@@ -29,11 +30,11 @@ if [ -n "$OPERATORS" ]; then
 fi
 
 if [ "$CHART_NAME" != "ranked" ]; then
-    echo "[INFO] Not a ranked server detected... removing Ingame, Events, AutoKiller, Bolty, Matrix and Idly plugins."
+    echo "[INFO] Not a ranked server detected... removing Ingame, Events, AutoKiller, Cheaty, Matrix and Idly plugins."
     rm -f /minecraft/plugins/ingame.jar /minecraft/plugins/Events.jar \
-        /minecraft/plugins/AutoKiller-*.jar /minecraft/plugins/Bolty-*.jar \
-        /minecraft/plugins/Matrix-*.jar \
-        /minecraft/plugins/Idly.jar
+        /minecraft/plugins/AutoKiller*.jar /minecraft/plugins/Cheaty*.jar \
+        /minecraft/plugins/Matrix*.jar \
+        /minecraft/plugins/Idly*.jar
 
 fi
 
@@ -45,7 +46,7 @@ fi
 
 if [ "$NODE_NAME" != "ns522982" ]; then
     echo "[INFO] Not on OCC node (node name: ns522982)... removing LPX and Matrix plugins."
-    rm -f /minecraft/plugins/LPX-*.jar /minecraft/plugins/Matrix-*.jar
+    rm -f /minecraft/plugins/LPX*.jar /minecraft/plugins/Matrix*.jar
 fi
 
 # disable PGM tablist if ingame exists

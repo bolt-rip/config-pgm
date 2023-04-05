@@ -9,4 +9,4 @@ JAVA_FLAGS="-XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -X
 
 /minecraft/bin/downscaler.sh &
 
-exec /minecraft/bin/mc-server-runner java $JAVA_FLAGS -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -XX:MaxRAMFraction=1 -Xms${MIN_MEMORY:-1G} -Xmx${MAX_MEMORY:-1G} -jar sportpaper-1.8.8-R0.1-SNAPSHOT.jar
+exec /minecraft/bin/mc-server-runner java $JAVA_FLAGS -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -XX:MaxRAMFraction=1 -Xms${MIN_MEMORY:-1G} -Xmx${MAX_MEMORY:-1G} -jar server.jar
