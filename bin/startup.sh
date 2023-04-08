@@ -21,8 +21,8 @@ if [ -n "$OPERATORS" ]; then
     for operator in $OPERATORS
     do
         unset IFS
-        UUID_URL="https://api.ashcon.app/mojang/v1/uuid/$operator"
-        UUID=$(wget -qO- --no-check-certificate $UUID_URL)
+        UUID_URL="https://api.ashcon.app/mojang/v2/user/$operator"
+        UUID=$(curl -s $UUID_URL | jq -r '.uuid')
         jq '. |= . + [{"uuid": "'$UUID'", "name": "'$operator'", "level": 4, "bypassesPlayerLimit": true}]' \
             /minecraft/ops.json > /minecraft/ops.json.new
         mv /minecraft/ops.json.new /minecraft/ops.json
