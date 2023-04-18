@@ -35,10 +35,6 @@ jobs:
           repositories: '[{ "id": "bolt-rip-private", "url": "https://repo.repsy.io/mvn/boltrip/private", "releases": { "enabled": "true" }, "snapshots": { "enabled": "true" } }]'
           servers: '[{ "id": "bolt-rip-private", "username": "${{ secrets.MAVEN_USERNAME }}", "password": "${{ secrets.MAVEN_PASSWORD }}" }]'
 
-      - name: Download private plugins from repsy
-        run: |
-          mvn -q dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/private -Dartifact=me.pablete1234:KitRecommender:1.1 -Ddest=plugins/
-
       - name: Delete useless files and directories
         run: |
           rm -rf competitive-maps/.git .git .github .gitignore competitive-maps/.github competitive-maps/.gitignore competitive-maps/README.md competitive-maps/_imaging_edits
