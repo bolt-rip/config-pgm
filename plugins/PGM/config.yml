@@ -163,8 +163,8 @@ groups:
     click-link: "https://octc.buycraft.net"
   donor:
     prefix: '&a*'
-    display-name: '&aDonor'
-    description: "&7Supported the server by donating &d❤"
+    display-name: '&aSupporter'
+    description: "&7Supported the server &d❤"
     click-link: "https://octc.buycraft.net"
   mapmaker:
     prefix: '&9*'
@@ -183,18 +183,10 @@ groups:
     display-name: '&4Supreme Overlord'
     description: "&7A notable person from the &e&lOvercast &4&lNetwork"
     click-link: "https://oc.tc"
-  completionist-10:
-    prefix: '&c*'
-    display-name: '&6Completionist'
-    description: '&7Completed the &eSeason 10 &6&lBattle Pass'
-  completionist-9:
-    prefix: '&6*'
-    display-name: '&6Completionist'
-    description: '&7Completed the &eSeason 9 &6&lBattle Pass'
-  completionist-8:
+  completionist-21:
     prefix: '&e*'
     display-name: '&6Completionist'
-    description: '&7Completed the &eSeason 8 &6&lBattle Pass'
+    description: '&7Completed the &eSeason 21 &6&lBattle Pass'
   builder:
     prefix: '&b*'
     display-name: '&bBuilder'
@@ -423,3 +415,4 @@ database-uri: ""
 # Experimental features that are not yet stable.
 experiments:
   unload-non-match-worlds: "true"
+  payload: true
