@@ -261,6 +261,11 @@ groups:
     display-name: "&6&lBronze 1"
     description: "&7This player is currently placed within &a&l0-599 &r&7SR."
     click-link: "https://oc.tc/leaderboards"
+  unranked:
+    prefix: "&8&l- "
+    display-name: "&8&lUnranked"
+    description: "&7This player is not placed in any SR range."
+    click-link: "https://oc.tc/leaderboards"
 # Miscellaneous
   sponsor:
     prefix: '&e+'
