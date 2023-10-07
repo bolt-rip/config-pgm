@@ -105,57 +105,162 @@ motd: ""
 #
 # Each group is assigned the permission "pgm.group.<name>".
 groups:
-# BOLT ranks
-  s:
-    prefix: "&c&lS "
-    display-name: "&c&lS Rank"
-    description: "&7This player is currently placed within &c&l4000-5000 &r&7SR."
-    click-link: "https://bolt.rip/leaderboards"
-  a_plus:
-    prefix: "&e&lA+ "
-    display-name: "&e&lA+ Rank"
-    description: "&7This player is currently placed within &e&l3500-3999 &r&7SR."
-    click-link: "https://bolt.rip/leaderboards"
-  a:
-    prefix: "&e&lA "
-    display-name: "&e&lA Rank"
-    description: "&7This player is currently placed within &e&l3000-3499 &r&7SR."
-    click-link: "https://bolt.rip/leaderboards"
-  b_plus:
-    prefix: "&7&lB+ "
-    display-name: "&7&lB+ Rank"
-    description: "&7This player is currently placed within &l2500-2999 SR."
-    click-link: "https://bolt.rip/leaderboards"
-  b:
-    prefix: "&7&lB "
-    display-name: "&7&lB Rank"
-    description: "&7This player is currently placed within &l2000-2499 SR."
-    click-link: "https://bolt.rip/leaderboards"
-  c_plus:
-    prefix: "&6&lC+ "
-    display-name: "&6&lC+ Rank"
-    description: "&7This player is currently placed within &6&l1500-1999 &r&7SR."
-    click-link: "https://bolt.rip/leaderboards"
-  c:
-    prefix: "&6&lC "
-    display-name: "&6&lC Rank"
-    description: "&7This player is currently placed within &6&l1000-1499 &r&7SR."
-    click-link: "https://bolt.rip/leaderboards"
-  d_plus:
-    prefix: "&a&lD+ "
-    display-name: "&a&lD+ Rank"
-    description: "&7This player is currently placed within &a&l500-999 &r&7SR."
-    click-link: "https://bolt.rip/leaderboards"
-  d:
-    prefix: "&a&lD "
-    display-name: "&a&lD Rank"
-    description: "&7This player is currently placed within &a&l0-499 &r&7SR."
-    click-link: "https://bolt.rip/leaderboards"
-  unranked:
-    prefix: "&8&l- "
-    display-name: "&8&lUnranked"
-    description: "&7This player is not placed in any SR range."
-    click-link: "https://bolt.rip/leaderboards"
+# Ranked ranks
+  grandmaster:
+    prefix: "&4&lGM "
+    display-name: "&4&lGM Rank"
+    description: "&7This player is currently placed within &4&l+3500 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  master_5:
+    prefix: "&c&lM5 "
+    display-name: "&c&lMaster 5"
+    description: "&7This player is currently placed within &c&l3400-3499 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  master_4:
+    prefix: "&c&lM4 "
+    display-name: "&c&lMaster 4"
+    description: "&7This player is currently placed within &c&l3300-3399 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  master_3:
+    prefix: "&c&lM3 "
+    display-name: "&c&lMaster 3"
+    description: "&7This player is currently placed within &c&l3200-3299 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  master_2:
+    prefix: "&c&lM2 "
+    display-name: "&c&lMaster 2"
+    description: "&7This player is currently placed within &c&l3100-3199 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  master_1:
+    prefix: "&c&lM1 "
+    display-name: "&c&lMaster 1"
+    description: "&7This player is currently placed within &9&l3000-3099 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  diamond_5:
+    prefix: "&9&lD5 "
+    display-name: "&9&lDiamond 4"
+    description: "&7This player is currently placed within &9&l2800-2899 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  diamond_4:
+    prefix: "&9&lD4 "
+    display-name: "&9&lDiamond 5"
+    description: "&7This player is currently placed within &9&l2900-2999 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  diamond_3:
+    prefix: "&9&lD3 "
+    display-name: "&9&lDiamond 3"
+    description: "&7This player is currently placed within &9&l2700-2799 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  diamond_2:
+    prefix: "&9&lD2 "
+    display-name: "&9&lDiamond 2"
+    description: "&7This player is currently placed within &9&l2600-2699 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  diamond_1:
+    prefix: "&9&lD1 "
+    display-name: "&9&lDiamond 1"
+    description: "&7This player is currently placed within &b&l2500-2599 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  platinum_5:
+    prefix: "&b&lP5 "
+    display-name: "&b&lPlatinum 5"
+    description: "&7This player is currently placed within &b&l2400-2499 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  platinum_4:
+    prefix: "&b&lP4 "
+    display-name: "&b&lPlatinum 4"
+    description: "&7This player is currently placed within &b&l2300-2399 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  platinum_3:
+    prefix: "&b&lP3 "
+    display-name: "&b&lPlatinum 3"
+    description: "&7This player is currently placed within &b&l2200-2299 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  platinum_2:
+    prefix: "&b&lP2 "
+    display-name: "&b&lPlatinum 2"
+    description: "&7This player is currently placed within &b&l2100-2199 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  platinum_1:
+    prefix: "&b&lP1 "
+    display-name: "&b&lPlatinum 1"
+    description: "&7This player is currently placed within &e&l2000-2099 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  gold_5:
+    prefix: "&e&lG5 "
+    display-name: "&e&lGold 5"
+    description: "&7This player is currently placed within &e&l1900-1999 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  gold_4:
+    prefix: "&e&lG4 "
+    display-name: "&e&lGold 4"
+    description: "&7This player is currently placed within &e&l1800-1899 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  gold_3:
+    prefix: "&e&lG3 "
+    display-name: "&e&lGold 3"
+    description: "&7This player is currently placed within &e&l1700-1799 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  gold_2:
+    prefix: "&e&lG2 "
+    display-name: "&e&lGold 2"
+    description: "&7This player is currently placed within &e&l1600-1699 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  gold_1:
+    prefix: "&e&lG1 "
+    display-name: "&e&lGold 1"
+    description: "&7This player is currently placed within &7&l1500-1599 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  silver_5:
+    prefix: "&7&lS5 "
+    display-name: "&7&lSilver 5"
+    description: "&7This player is currently placed within &7&l1400-1499 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  silver_4:
+    prefix: "&7&lS4 "
+    display-name: "&7&lSilver 4"
+    description: "&7This player is currently placed within &7&l1300-1399 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  silver_3:
+    prefix: "&7&lS3 "
+    display-name: "&7&lSilver 3"
+    description: "&7This player is currently placed within &7&l1200-1299 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  silver_2:
+    prefix: "&7&lS2 "
+    display-name: "&7&lSilver 2"
+    description: "&7This player is currently placed within &7&l1100-1199 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  silver_1:
+    prefix: "&7&lS1 "
+    display-name: "&7&lSilver 1"
+    description: "&7This player is currently placed within &6&l1000-1099 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  bronze_5:
+    prefix: "&6&lB5 "
+    display-name: "&6&lBronze 5"
+    description: "&7This player is currently placed within &6&l900-999 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  bronze_4:
+    prefix: "&6&lB4 "
+    display-name: "&6&lBronze 4"
+    description: "&7This player is currently placed within &6&l800-899 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  bronze_3:
+    prefix: "&6&lB3 "
+    display-name: "&6&lBronze 3"
+    description: "&7This player is currently placed within &6&l700-799 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  bronze_2:
+    prefix: "&6&lB2 "
+    display-name: "&6&lBronze 2"
+    description: "&7This player is currently placed within &6&l600-699 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
+  bronze_1:
+    prefix: "&6&lB1 "
+    display-name: "&6&lBronze 1"
+    description: "&7This player is currently placed within &a&l0-599 &r&7SR."
+    click-link: "https://oc.tc/leaderboards"
 # Miscellaneous
   sponsor:
     prefix: '&e+'
@@ -184,6 +289,10 @@ groups:
     display-name: '&4Supreme Overlord'
     description: "&7A notable person from the &e&lOvercast &4&lNetwork"
     click-link: "https://oc.tc"
+  completionist-22:
+    prefix: '&5*'
+    display-name: '&6Completionist'
+    description: '&7Completed the &eSeason 22 &6&lBattle Pass'
   completionist-21:
     prefix: '&e*'
     display-name: '&6Completionist'
