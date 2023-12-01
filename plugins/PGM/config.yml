@@ -138,12 +138,12 @@ groups:
     click-link: "https://oc.tc/leaderboards"
   diamond_5:
     prefix: "&9&lD5 "
-    display-name: "&9&lDiamond 4"
+    display-name: "&9&lDiamond 5"
     description: "&7This player is currently placed within &9&l2800-2899 &r&7SR."
     click-link: "https://oc.tc/leaderboards"
   diamond_4:
     prefix: "&9&lD4 "
-    display-name: "&9&lDiamond 5"
+    display-name: "&9&lDiamond 4"
     description: "&7This player is currently placed within &9&l2900-2999 &r&7SR."
     click-link: "https://oc.tc/leaderboards"
   diamond_3:
