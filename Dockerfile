@@ -25,8 +25,7 @@ RUN ash -c "wget --content-disposition -q $(curl -sL https://api.github.com/repo
             $(curl -sL https://api.github.com/repos/applenick/autokiller/releases/latest | jq -r '.assets[].browser_download_url') \
             $(curl -sL https://api.github.com/repos/Pablete1234/KitRecommender/releases/latest | jq -r '.assets[].browser_download_url') \
             $(curl -sL https://api.github.com/repos/OvercastCommunity/Cheaty/releases/latest | jq -r '.assets[].browser_download_url') \
-            $(curl -sL https://api.github.com/repos/OvercastCommunity/Idly/releases/latest | jq -r '.assets[].browser_download_url') \
-            https://cdn.discordapp.com/attachments/831301220223549451/1143319726156697681/PGM.jar"
+            $(curl -sL https://api.github.com/repos/OvercastCommunity/Idly/releases/latest | jq -r '.assets[].browser_download_url')"
             
 WORKDIR /minecraft
 
