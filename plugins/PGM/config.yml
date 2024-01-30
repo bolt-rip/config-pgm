@@ -270,7 +270,7 @@ groups:
   sponsor:
     prefix: '&e+'
     display-name: '&eSponsor'
-    description: "&7Supported the server by donating &d❤"
+    description: "&7Supported the server &d❤"
     click-link: "https://octc.buycraft.net"
   donor:
     prefix: '&a*'
@@ -294,14 +294,14 @@ groups:
     display-name: '&4Supreme Overlord'
     description: "&7A notable person from the &e&lOvercast &4&lNetwork"
     click-link: "https://oc.tc"
+  completionist-24:
+    prefix: '&d*'
+    display-name: '&6Completionist'
+    description: '&7Completed the &eSeason 24 &6&lBattle Pass'
   completionist-23:
     prefix: '&6*'
     display-name: '&6Completionist'
     description: '&7Completed the &eSeason 23 &6&lBattle Pass'
-  completionist-22:
-    prefix: '&5*'
-    display-name: '&6Completionist'
-    description: '&7Completed the &eSeason 22 &6&lBattle Pass'
   builder:
     prefix: '&b*'
     display-name: '&bBuilder'
