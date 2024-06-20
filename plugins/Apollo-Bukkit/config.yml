@@ -1,0 +1,138 @@
+# General and module specific settings. https://lunarclient.dev/apollo/server-owners/config
+
+# Set to 'true' to send opped players available update message, otherwise 'false'.
+send-updater-message: true
+mcstats:
+    # Set to 'true' to send statistics to MCStats, otherwise 'false'.
+    send-stats: false
+    # Your server's installation id used for stats.
+    installation-id:
+    # Set to 'true' to send your minecraft server statistics to MCStats, otherwise 'false'.
+    server-statistics: false
+    # Set to 'true' to send your server hardware information to MCStats, otherwise 'false'.
+    hardware-information: false
+    # Set to 'true' to send your server software information to MCStats, otherwise 'false'.
+    software-information: false
+    # Set to 'true' to send your server cpu and ram usage to MCStats, otherwise 'false'.
+    performance: false
+    # Set to 'true' to send your server player count to MCStats, otherwise 'false'.
+    counts: false
+modules:
+    beam:
+        # Set to 'true' to enable this module, otherwise set 'false'.
+        enable: true
+    border:
+        # Set to 'true' to enable this module, otherwise set 'false'.
+        enable: true
+    chat:
+        # Set to 'true' to enable this module, otherwise set 'false'.
+        enable: true
+    colored_fire:
+        # Set to 'true' to enable this module, otherwise set 'false'.
+        enable: true
+    combat:
+        # Set to 'true' to enable this module, otherwise set 'false'.
+        enable: true
+        # Set to 'true' to disable the hit delay on 1.8, otherwise 'false'.
+        disable-miss-penalty: true
+    cooldown:
+        # Set to 'true' to enable this module, otherwise set 'false'.
+        enable: true
+    entity:
+        # Set to 'true' to enable this module, otherwise set 'false'.
+        enable: true
+    glow:
+        # Set to 'true' to enable this module, otherwise set 'false'.
+        enable: true
+    hologram:
+        # Set to 'true' to enable this module, otherwise set 'false'.
+        enable: true
+    limb:
+        # Set to 'true' to enable this module, otherwise set 'false'.
+        enable: true
+    nametag:
+        # Set to 'true' to enable this module, otherwise set 'false'.
+        enable: true
+    nick_hider:
+        # Set to 'true' to enable this module, otherwise set 'false'.
+        enable: true
+    notification:
+        # Set to 'true' to enable this module, otherwise set 'false'.
+        enable: true
+    packet_enrichment:
+        # Set to 'true' to enable this module, otherwise set 'false'.
+        enable: false
+    rich_presence:
+        # Set to 'true' to enable this module, otherwise set 'false'.
+        enable: true
+    server_rule:
+        # Set to 'true' to enable this module, otherwise set 'false'.
+        enable: true
+        # Set to 'true' to enable leaving game warning, otherwise 'false'.
+        competitive-game: false
+        # A list of commands that will trigger the competitive popup.
+        competitive-commands:
+        - /server
+        - /servers
+        - /hub
+        # Set to 'true' to disable shaders, otherwise 'false'.
+        disable-shaders: false
+        # Set to 'true' to disable chunk reloading, otherwise 'false'.
+        disable-chunk-reloading: false
+        # Set to 'true' to disable broadcasting, otherwise 'false'.
+        disable-broadcasting: false
+        # Set to 'true' to enable anti portal traps, otherwise 'false'.
+        anti-portal-traps: true
+        # Set to 'true' to override brightness, otherwise 'false'.
+        override-brightness: false
+        # Set the brightness amount.
+        brightness: 50
+        # Set to 'true' to override nametag render distance, otherwise 'false'.
+        override-nametag-render-distance: false
+        # Set the nametag render distance amount.
+        nametag-render-distance: 64
+        # Set to 'true' to override max chat length, otherwise 'false'.
+        override-max-chat-length: false
+        # Set the nametag render distance amount.
+        max-chat-length: 256
+    staff_mod:
+        # Set to 'true' to enable this module, otherwise set 'false'.
+        enable: true
+    stopwatch:
+        # Set to 'true' to enable this module, otherwise set 'false'.
+        enable: true
+    team:
+        # Set to 'true' to enable this module, otherwise set 'false'.
+        enable: true
+    title:
+        # Set to 'true' to enable this module, otherwise set 'false'.
+        enable: true
+    tnt_countdown:
+        # Set to 'true' to enable this module, otherwise set 'false'.
+        enable: true
+        # Set the amount of ticks before the TNT explodes.
+        tnt-ticks: 80
+        # Whether to override custom TNT explosion ticks.
+        override-custom-ticks: false
+    transfer:
+        # Set to 'true' to enable this module, otherwise set 'false'.
+        enable: true
+    vignette:
+        # Set to 'true' to enable this module, otherwise set 'false'.
+        enable: true
+    waypoint:
+        # Set to 'true' to enable this module, otherwise set 'false'.
+        enable: true
+        # Sets the default waypoints to send to the player.
+        default-waypoints:
+        -   name: Spawn
+            location:
+                world: world
+                x: 0
+                y: 100
+                z: 0
+            color: '#FF0000'
+            prevent-removal: false
+            hidden: false
+        # Set to 'true' to let servers handle waypoints, otherwise 'false'.
+        server-handles-waypoints: false

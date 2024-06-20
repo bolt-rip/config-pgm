@@ -31,7 +31,7 @@ WORKDIR /minecraft
 
 # RUN wget -q https://pkg.ashcon.app/sportpaper -O sportpaper.jar
 
-FROM amazoncorretto:8-alpine-jdk
+FROM amazoncorretto:21-alpine-jdk
 
 RUN addgroup -g 1000 minecraft && \
     adduser -u 1000 -D -G minecraft minecraft
