@@ -1,4 +1,4 @@
-FROM alpine:3.12 AS BUILD
+FROM alpine:3.20 AS BUILD
 
 RUN mkdir /minecraft
 
