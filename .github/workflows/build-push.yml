@@ -28,6 +28,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: 21
+          distribution: temurin
 
       - name: maven-settings-xml-action
         uses: whelk-io/maven-settings-xml-action@v9
