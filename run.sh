@@ -10,4 +10,4 @@ JAVA_FLAGS="-XX:+UseZGC -XX:AllocatePrefetchStyle=1 -XX:+ZGenerational -XX:+Unlo
 
 /minecraft/bin/downscaler.sh &
 
-exec /minecraft/bin/mc-server-runner java $JAVA_FLAGS -XX:+UseCGroupMemoryLimitForHeap -XX:MaxRAMFraction=1 -Xms${MIN_MEMORY:-1G} -Xmx${MAX_MEMORY:-1G} -jar server.jar
+exec /minecraft/bin/mc-server-runner java $JAVA_FLAGS -XX:+UseContainerSupport -XX:MaxRAMFraction=1 -Xms${MIN_MEMORY:-1G} -Xmx${MAX_MEMORY:-1G} -jar --add-opens java.base/java.lang.invoke=ALL-UNNAMED server.jar
