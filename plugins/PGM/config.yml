@@ -294,14 +294,20 @@ groups:
     display-name: '&4Supreme Overlord'
     description: "&7A notable person from the &e&lOvercast &4&lNetwork"
     click-link: "https://oc.tc"
+  completionist-26:
+    prefix: '&c*'
+    display-name: '&6Completionist'
+    description: '&7Completed the &eSeason 26 &6&lBattle Pass'
+    lobby-weight: 30
+  completionist-25:
+    prefix: '&2*'
+    display-name: '&6Completionist'
+    description: '&7Completed the &eSeason 25 &6&lBattle Pass'
+    lobby-weight: 31
   completionist-24:
     prefix: '&d*'
     display-name: '&6Completionist'
     description: '&7Completed the &eSeason 24 &6&lBattle Pass'
-  completionist-23:
-    prefix: '&6*'
-    display-name: '&6Completionist'
-    description: '&7Completed the &eSeason 23 &6&lBattle Pass'
   builder:
     prefix: '&b*'
     display-name: '&bBuilder'
