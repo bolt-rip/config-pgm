@@ -31,7 +31,7 @@ jobs:
           distribution: temurin
 
       - name: maven-settings-xml-action
-        uses: whelk-io/maven-settings-xml-action@v9
+        uses: whelk-io/maven-settings-xml-action@v22
         with:
           repositories: '[{ "id": "bolt-rip-private", "url": "https://repo.repsy.io/mvn/boltrip/private", "releases": { "enabled": "true" }, "snapshots": { "enabled": "true" } }]'
           servers: '[{ "id": "bolt-rip-private", "username": "${{ secrets.MAVEN_USERNAME }}", "password": "${{ secrets.MAVEN_PASSWORD }}" }]'
@@ -53,7 +53,7 @@ jobs:
           commit-message: ORIGIN_COMMIT
 
       - name: Publish to Registry
-        uses: docker://lgohr/publish-docker-github-action:20210118133633a73f0f
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: bolt-rip/config-pgm
           registry: ghcr.io
